@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddb7bvepj2cwn"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_ey1j4"]
+[ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://background.tscn" id="2_8mf41"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_if805"]
+font_size = 82
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ey1j4")
+
+[node name="Background" parent="." instance=ExtResource("2_8mf41")]
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 215.0
+text = "Cosmic Gateaway"
+label_settings = SubResource("LabelSettings_if805")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lvl1Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 272.0
+offset_right = 288.0
+offset_bottom = 355.0
+text = "Lvl 1"
+
+[node name="Lvl2Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 272.0
+offset_right = 536.0
+offset_bottom = 355.0
+text = "Lvl 2
+"
+
+[node name="Lvl3Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 616.0
+offset_top = 272.0
+offset_right = 776.0
+offset_bottom = 355.0
+text = "Lvl 3"
+
+[node name="Lvl4Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 864.0
+offset_top = 272.0
+offset_right = 1024.0
+offset_bottom = 355.0
+text = "Lvl 4"
+
+[node name="QuitButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 416.0
+offset_right = 656.0
+offset_bottom = 499.0
+text = "Quit"
+
+[connection signal="pressed" from="Control/Lvl1Button" to="." method="_on_lvl_1_button_pressed"]
+[connection signal="pressed" from="Control/Lvl2Button" to="." method="_on_lvl_2_button_pressed"]
+[connection signal="pressed" from="Control/Lvl3Button" to="." method="_on_lvl_3_button_pressed"]
+[connection signal="pressed" from="Control/Lvl4Button" to="." method="_on_lvl_4_button_pressed"]
+[connection signal="pressed" from="Control/QuitButton" to="." method="_on_quit_button_pressed"]

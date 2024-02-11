@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://nds3dn7fygjc"]
+
+[ext_resource type="Texture2D" uid="uid://sacdca68rcvi" path="res://assets/Backgrounds/black.png" id="1_00r60"]
+[ext_resource type="Texture2D" uid="uid://un0m0tpc1dbm" path="res://assets/PNG/Meteors/meteorBrown_big4.png" id="2_cqljy"]
+[ext_resource type="Texture2D" uid="uid://bvsclnqdfbsxk" path="res://assets/PNG/Meteors/meteorBrown_tiny1.png" id="3_l1f6n"]
+[ext_resource type="Texture2D" uid="uid://q10fcop3ya5s" path="res://assets/PNG/Meteors/meteorBrown_small1.png" id="4_vvca8"]
+[ext_resource type="Texture2D" uid="uid://b155pn4jo53cv" path="res://assets/PNG/Meteors/meteorGrey_tiny1.png" id="5_gtite"]
+[ext_resource type="Texture2D" uid="uid://cwdfsoyjmr1pb" path="res://assets/PNG/Power-ups/shield_gold.png" id="6_glgcp"]
+[ext_resource type="Texture2D" uid="uid://vry7xx3qher4" path="res://assets/PNG/Power-ups/bolt_gold.png" id="7_u3ck8"]
+[ext_resource type="Texture2D" uid="uid://c2ult01rjhvo8" path="res://assets/PNG/ufoGreen.png" id="8_ltmvp"]
+[ext_resource type="Texture2D" uid="uid://b0l0hgt7u2pb7" path="res://assets/PNG/Lasers/laserGreen15.png" id="9_v82o8"]
+
+[node name="Idea" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 314)
+scale = Vector2(5.79688, 5.79688)
+texture = ExtResource("1_00r60")
+
+[node name="MeteorBrownBig4" type="Sprite2D" parent="."]
+position = Vector2(160, 194)
+texture = ExtResource("2_cqljy")
+
+[node name="MeteorBrownTiny1" type="Sprite2D" parent="."]
+position = Vector2(939, 248)
+texture = ExtResource("3_l1f6n")
+
+[node name="MeteorBrownSmall1" type="Sprite2D" parent="."]
+position = Vector2(320, 467)
+texture = ExtResource("4_vvca8")
+
+[node name="MeteorGreyTiny1" type="Sprite2D" parent="."]
+position = Vector2(1042, 566)
+texture = ExtResource("5_gtite")
+
+[node name="ShieldGold" type="Sprite2D" parent="."]
+position = Vector2(331, 183)
+texture = ExtResource("6_glgcp")
+
+[node name="BoltGold" type="Sprite2D" parent="."]
+position = Vector2(905, 515)
+texture = ExtResource("7_u3ck8")
+
+[node name="UfoGreen" type="Sprite2D" parent="."]
+position = Vector2(472, 349)
+texture = ExtResource("8_ltmvp")
+
+[node name="LaserGreen15" type="Sprite2D" parent="."]
+position = Vector2(265, 256)
+texture = ExtResource("9_v82o8")
+
+[node name="LaserGreen16" type="Sprite2D" parent="."]
+position = Vector2(858, 108)
+texture = ExtResource("9_v82o8")

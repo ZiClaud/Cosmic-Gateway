@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+*.png
+*.import
+*.ttf
+*.ogg
+*.xml
+*.svg
+*.swf
