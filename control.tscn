@@ -1,9 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddb7bvepj2cwn"]
+[gd_scene load_steps=10 format=3 uid="uid://ddb7bvepj2cwn"]
 
 [ext_resource type="Script" path="res://control.gd" id="1_ey1j4"]
 [ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://background.tscn" id="2_8mf41"]
+[ext_resource type="FontFile" uid="uid://cj2bfbenla0y0" path="res://assets/Bonus/kenvector_future.ttf" id="3_8xofx"]
+[ext_resource type="Texture2D" uid="uid://c7lln2gfds13a" path="res://assets/PNG/UI/numeral1.png" id="4_pf84o"]
+[ext_resource type="Texture2D" uid="uid://5myfnlnwgl7o" path="res://assets/PNG/UI/numeral2.png" id="5_qi48l"]
+[ext_resource type="Texture2D" uid="uid://0pnlm1m8eo3e" path="res://assets/PNG/UI/numeral3.png" id="6_3li7d"]
+[ext_resource type="Texture2D" uid="uid://dl0ood68t7xff" path="res://assets/PNG/UI/numeral4.png" id="7_5shdv"]
+[ext_resource type="Texture2D" uid="uid://biy6dk7oa6kvc" path="res://assets/PNG/UI/numeralX.png" id="8_t7fsl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_if805"]
+font = ExtResource("3_8xofx")
 font_size = 82
 
 [node name="Main" type="Node2D"]
@@ -20,8 +27,9 @@ offset_bottom = 40.0
 
 [node name="TitleLabel" type="Label" parent="Control"]
 layout_mode = 0
+offset_top = 35.0
 offset_right = 1153.0
-offset_bottom = 215.0
+offset_bottom = 250.0
 text = "Cosmic Gateaway"
 label_settings = SubResource("LabelSettings_if805")
 horizontal_alignment = 1
@@ -33,7 +41,8 @@ offset_left = 128.0
 offset_top = 272.0
 offset_right = 288.0
 offset_bottom = 355.0
-text = "Lvl 1"
+icon = ExtResource("4_pf84o")
+icon_alignment = 1
 
 [node name="Lvl2Button" type="Button" parent="Control"]
 layout_mode = 0
@@ -41,8 +50,8 @@ offset_left = 376.0
 offset_top = 272.0
 offset_right = 536.0
 offset_bottom = 355.0
-text = "Lvl 2
-"
+icon = ExtResource("5_qi48l")
+icon_alignment = 1
 
 [node name="Lvl3Button" type="Button" parent="Control"]
 layout_mode = 0
@@ -50,7 +59,8 @@ offset_left = 616.0
 offset_top = 272.0
 offset_right = 776.0
 offset_bottom = 355.0
-text = "Lvl 3"
+icon = ExtResource("6_3li7d")
+icon_alignment = 1
 
 [node name="Lvl4Button" type="Button" parent="Control"]
 layout_mode = 0
@@ -58,7 +68,8 @@ offset_left = 864.0
 offset_top = 272.0
 offset_right = 1024.0
 offset_bottom = 355.0
-text = "Lvl 4"
+icon = ExtResource("7_5shdv")
+icon_alignment = 1
 
 [node name="QuitButton" type="Button" parent="Control"]
 layout_mode = 0
@@ -66,7 +77,8 @@ offset_left = 496.0
 offset_top = 416.0
 offset_right = 656.0
 offset_bottom = 499.0
-text = "Quit"
+icon = ExtResource("8_t7fsl")
+icon_alignment = 1
 
 [connection signal="pressed" from="Control/Lvl1Button" to="." method="_on_lvl_1_button_pressed"]
 [connection signal="pressed" from="Control/Lvl2Button" to="." method="_on_lvl_2_button_pressed"]
