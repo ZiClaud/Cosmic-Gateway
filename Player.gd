@@ -2,20 +2,48 @@ extends CharacterBody2D
 
 @export var laser_tscn: PackedScene
 
-@export var max_speed:int = 1400
-@export var accel:int = 1500
+@export var accel:int = 15000
 @export var friction:int = 10
 
 var input:Vector2 = Vector2.ZERO
+
+var beanRight:Node2D
+var beanLeft:Node2D
+var beanUp:Node2D
+var beanDown:Node2D
+
+func _ready():
+	beanRight = $Beans/BeamRight
+	beanLeft = $Beans/BeamLeft
+	beanUp = $Beans/BeamUp
+	beanDown = $Beans/BeamDown
 
 func _physics_process(delta):
 	player_movement(delta)
 	spawn_laser()
 
+func show_beans(val:Vector2):
+	if val.x > 0:
+		beanRight.visible = false
+		beanLeft.visible = true
+	elif val.x < 0:
+		beanRight.visible = true
+		beanLeft.visible = false
+	
+	if val.y > 0:
+		beanDown.visible = false
+		beanUp.visible = true
+	elif val.y < 0:
+		beanDown.visible = true
+		beanUp.visible = false
+
 func get_input():
 	input.x = int(Input.is_action_just_pressed("ui_right")) - int(Input.is_action_just_pressed("ui_left"))
 	input.y = int(Input.is_action_just_pressed("ui_down")) - int(Input.is_action_just_pressed("ui_up"))
-	return input.normalized()
+
+	input = input.normalized()
+	show_beans(input)
+	return input
 
 func player_movement(delta):
 	input = get_input()
@@ -26,7 +54,6 @@ func player_movement(delta):
 			self.velocity = Vector2.ZERO
 	else:
 		self.velocity += (input * accel * delta)
-		self.velocity = self.velocity.limit_length(max_speed)
 	
 	move_and_slide()
 
@@ -35,3 +62,4 @@ func spawn_laser():
 		var new_laser = laser_tscn.instantiate()
 		new_laser.position = self.position
 		self.add_sibling(new_laser)
+

@@ -1,8 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxp8u8n88eu7"]
+[gd_scene load_steps=10 format=3 uid="uid://bxp8u8n88eu7"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_fgemd"]
 [ext_resource type="Texture2D" uid="uid://jrm3u7kycsp2" path="res://assets/PNG/ufoRed.png" id="2_5amdm"]
 [ext_resource type="PackedScene" uid="uid://pq8ofv0les2i" path="res://laser.tscn" id="2_fyord"]
+[ext_resource type="Texture2D" uid="uid://cinf2p4egu433" path="res://assets/PNG/Parts/beam0.png" id="4_o1s6p"]
+[ext_resource type="Script" path="res://BeamRight.gd" id="5_xwn2d"]
+[ext_resource type="Script" path="res://BeamLeft.gd" id="6_34urt"]
+[ext_resource type="Script" path="res://BeamUp.gd" id="7_8x128"]
+[ext_resource type="Script" path="res://BeamDown.gd" id="8_mjhkb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hxcxu"]
 radius = 29.2746
@@ -17,3 +22,57 @@ texture = ExtResource("2_5amdm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_hxcxu")
+
+[node name="Beans" type="Node2D" parent="."]
+
+[node name="BeamRight" type="Sprite2D" parent="Beans"]
+visible = false
+position = Vector2(39, -1)
+rotation = 3.14159
+scale = Vector2(0.337209, 0.337209)
+texture = ExtResource("4_o1s6p")
+script = ExtResource("5_xwn2d")
+
+[node name="Timer" type="Timer" parent="Beans/BeamRight"]
+wait_time = 0.25
+
+[node name="BeamLeft" type="Sprite2D" parent="Beans"]
+visible = false
+position = Vector2(-39, 0)
+scale = Vector2(0.337209, 0.337209)
+texture = ExtResource("4_o1s6p")
+script = ExtResource("6_34urt")
+
+[node name="Timer" type="Timer" parent="Beans/BeamLeft"]
+wait_time = 0.25
+
+[node name="BeamUp" type="Sprite2D" parent="Beans"]
+visible = false
+position = Vector2(0, -39)
+rotation = 1.5708
+scale = Vector2(0.337209, 0.337209)
+texture = ExtResource("4_o1s6p")
+script = ExtResource("7_8x128")
+
+[node name="Timer" type="Timer" parent="Beans/BeamUp"]
+wait_time = 0.25
+
+[node name="BeamDown" type="Sprite2D" parent="Beans"]
+visible = false
+position = Vector2(0, 39)
+rotation = -1.5708
+scale = Vector2(0.337209, 0.337209)
+texture = ExtResource("4_o1s6p")
+script = ExtResource("8_mjhkb")
+
+[node name="Timer" type="Timer" parent="Beans/BeamDown"]
+wait_time = 0.25
+
+[connection signal="visibility_changed" from="Beans/BeamRight" to="Beans/BeamRight" method="_on_visibility_changed"]
+[connection signal="timeout" from="Beans/BeamRight/Timer" to="Beans/BeamRight" method="_on_timer_timeout"]
+[connection signal="visibility_changed" from="Beans/BeamLeft" to="Beans/BeamLeft" method="_on_visibility_changed"]
+[connection signal="timeout" from="Beans/BeamLeft/Timer" to="Beans/BeamLeft" method="_on_timer_timeout"]
+[connection signal="visibility_changed" from="Beans/BeamUp" to="Beans/BeamUp" method="_on_visibility_changed"]
+[connection signal="timeout" from="Beans/BeamUp/Timer" to="Beans/BeamUp" method="_on_timer_timeout"]
+[connection signal="visibility_changed" from="Beans/BeamDown" to="Beans/BeamDown" method="_on_visibility_changed"]
+[connection signal="timeout" from="Beans/BeamDown/Timer" to="Beans/BeamDown" method="_on_timer_timeout"]
