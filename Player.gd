@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var laser_tscn: PackedScene
+
 @export var max_speed:int = 1400
 @export var accel:int = 1500
 @export var friction:int = 10
@@ -8,6 +10,7 @@ var input:Vector2 = Vector2.ZERO
 
 func _physics_process(delta):
 	player_movement(delta)
+	spawn_laser()
 
 func get_input():
 	input.x = int(Input.is_action_just_pressed("ui_right")) - int(Input.is_action_just_pressed("ui_left"))
@@ -26,3 +29,9 @@ func player_movement(delta):
 		self.velocity = self.velocity.limit_length(max_speed)
 	
 	move_and_slide()
+
+func spawn_laser():
+	if Input.is_action_just_pressed("ui_accept"):
+		var new_laser = laser_tscn.instantiate()
+		new_laser.position = self.position
+		self.add_sibling(new_laser)
