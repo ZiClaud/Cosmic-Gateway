@@ -1,6 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxp8u8n88eu7"]
+[gd_scene load_steps=4 format=3 uid="uid://bxp8u8n88eu7"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_fgemd"]
+[ext_resource type="Texture2D" uid="uid://jrm3u7kycsp2" path="res://assets/PNG/ufoRed.png" id="2_5amdm"]
 
-[node name="Player" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_hxcxu"]
+radius = 29.2746
+
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_fgemd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_5amdm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hxcxu")

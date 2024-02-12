@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://gkesgk0122oq"]
+[gd_scene load_steps=4 format=3 uid="uid://gkesgk0122oq"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_r7xcc"]
+[ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://background.tscn" id="2_odnxg"]
+[ext_resource type="PackedScene" uid="uid://bxp8u8n88eu7" path="res://player.tscn" id="3_441n5"]
+[ext_resource type="PackedScene" uid="uid://dgojdu484rluv" path="res://walls.tscn" id="3_ttxnw"]
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_r7xcc")
+
+[node name="Background" parent="." instance=ExtResource("2_odnxg")]
+position = Vector2(35, 72)
+
+[node name="Player" parent="." instance=ExtResource("3_441n5")]
+position = Vector2(573, 327)
+
+[node name="Walls" parent="." instance=ExtResource("3_ttxnw")]
