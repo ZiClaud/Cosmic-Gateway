@@ -11,3 +11,8 @@ func teleport(node:Node2D):
 		node.position.y = 10
 	if (node.position.y < -10):
 		node.position.y = viewport_y + 10
+
+func game_over(win:bool):
+	if win:
+		pass #TODO
+	get_tree().change_scene_to_file("res://control.tscn")

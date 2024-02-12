@@ -18,5 +18,6 @@ func _process(delta):
 
 
 func _on_area_entered(area):
-	# Destroy ship
+	# Destroy meteor
 	self.queue_free()
+	# TODO: create 2/3 smaller meteors

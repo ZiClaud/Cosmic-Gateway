@@ -18,10 +18,12 @@ func _ready():
 	beanUp = $Beans/BeamUp
 	beanDown = $Beans/BeamDown
 
+
 func _physics_process(delta):
 	player_movement(delta)
 	spawn_laser()
 	Utils.teleport(self)
+
 
 func show_beans(val:Vector2):
 	if val.x > 0:
@@ -38,6 +40,7 @@ func show_beans(val:Vector2):
 		beanDown.visible = true
 		beanUp.visible = false
 
+
 func get_input():
 	input.x = int(Input.is_action_just_pressed("ui_right")) - int(Input.is_action_just_pressed("ui_left"))
 	input.y = int(Input.is_action_just_pressed("ui_down")) - int(Input.is_action_just_pressed("ui_up"))
@@ -45,6 +48,7 @@ func get_input():
 	input = input.normalized()
 	show_beans(input)
 	return input
+
 
 func player_movement(delta):
 	input = get_input()
@@ -58,9 +62,21 @@ func player_movement(delta):
 	
 	move_and_slide()
 
+
 func spawn_laser():
 	if Input.is_action_just_pressed("ui_accept"):
 		var new_laser = laser_tscn.instantiate()
 		new_laser.position = self.position
 		self.add_sibling(new_laser)
 
+
+
+func _on_area_entered(collider_area):
+	if collider_area.is_in_group("enemy"):
+		self.queue_free()
+
+
+func _on_area_2d_area_entered(collider_area):
+	if collider_area.is_in_group("enemy"):
+		self.queue_free()
+		Utils.game_over(false)
