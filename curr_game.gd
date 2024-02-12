@@ -1,11 +1,12 @@
 extends Node
 
-var _level:int = 1
-var _score:int = 0
+var _level:int
+var _score:int
 var _score_needed:int
 
 func startLevel(lvl:int):
 	_level = lvl
+	_score = 0
 	if (_level == 1):
 		_score_needed = 100
 	elif (_level == 2):
