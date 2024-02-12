@@ -1,16 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://btnf3bbaaowe6"]
+[gd_scene load_steps=6 format=3 uid="uid://btnf3bbaaowe6"]
 
 [ext_resource type="Texture2D" uid="uid://sacdca68rcvi" path="res://assets/Backgrounds/black.png" id="1_d2ykx"]
+[ext_resource type="Script" path="res://background.gd" id="1_eu22v"]
 [ext_resource type="Texture2D" uid="uid://bxphmp5f0p8ry" path="res://assets/Backgrounds/blue.png" id="2_x2p0x"]
 [ext_resource type="Texture2D" uid="uid://7x4pydabsu21" path="res://assets/Backgrounds/darkPurple.png" id="3_lyaqo"]
 [ext_resource type="Texture2D" uid="uid://vasvu3ojdih6" path="res://assets/Backgrounds/purple.png" id="4_8v8c8"]
 
 [node name="Background" type="Node2D"]
+script = ExtResource("1_eu22v")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="BG1ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BG1ParallaxLayer"]
 texture = ExtResource("1_d2ykx")
@@ -205,7 +206,6 @@ position = Vector2(1280, 768)
 texture = ExtResource("2_x2p0x")
 
 [node name="BG3ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BG3ParallaxLayer"]
 texture = ExtResource("3_lyaqo")
@@ -303,7 +303,6 @@ position = Vector2(1280, 768)
 texture = ExtResource("3_lyaqo")
 
 [node name="BG4ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BG4ParallaxLayer"]
 texture = ExtResource("4_8v8c8")
