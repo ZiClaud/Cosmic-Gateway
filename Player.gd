@@ -21,6 +21,7 @@ func _ready():
 func _physics_process(delta):
 	player_movement(delta)
 	spawn_laser()
+	Utils.teleport(self)
 
 func show_beans(val:Vector2):
 	if val.x > 0:

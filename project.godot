@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 LevelSelection="*res://level_selection.gd"
 CurrGame="*res://curr_game.gd"
+Utils="*res://utils.gd"
 
 [input]
 

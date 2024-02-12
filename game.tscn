@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://background.tscn" id="2_odnxg"]
 [ext_resource type="PackedScene" uid="uid://bxp8u8n88eu7" path="res://player.tscn" id="3_441n5"]
-[ext_resource type="PackedScene" uid="uid://dgojdu484rluv" path="res://walls.tscn" id="3_ttxnw"]
+[ext_resource type="PackedScene" uid="uid://dew2fwyq6eato" path="res://meteor.tscn" id="4_x4aar"]
 
 [node name="Game" type="Node2D"]
 
@@ -12,4 +12,5 @@ position = Vector2(35, 72)
 [node name="Player" parent="." instance=ExtResource("3_441n5")]
 position = Vector2(573, 327)
 
-[node name="Walls" parent="." instance=ExtResource("3_ttxnw")]
+[node name="Meteor" parent="." instance=ExtResource("4_x4aar")]
+position = Vector2(266, 256)

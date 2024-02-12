@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://dew2fwyq6eato"]
+
+[ext_resource type="Script" path="res://Meteor.gd" id="1_3dnck"]
+[ext_resource type="Texture2D" uid="uid://csgxvuq35ducx" path="res://assets/PNG/Meteors/meteorBrown_big1.png" id="2_twb5i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1iekx"]
+size = Vector2(19.1924, 43.2302)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suw8o"]
+size = Vector2(55, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsxeg"]
+size = Vector2(44.6482, 17.5816)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xv4nr"]
+size = Vector2(32.8665, 39.4557)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2und5"]
+size = Vector2(20, 54.9618)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6q8t0"]
+size = Vector2(50.9011, 20)
+
+[node name="Meteor" type="Area2D"]
+script = ExtResource("1_3dnck")
+metadata/_edit_group_ = true
+
+[node name="MeteorBrownBig1" type="Sprite2D" parent="."]
+texture = ExtResource("2_twb5i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-27.5013, 18.0697)
+rotation = -0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1iekx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -31)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_suw8o")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(26, -17)
+rotation = 0.959931
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_rsxeg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(26.3012, 7.63733)
+rotation = 0.436332
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_xv4nr")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(-28.6907, -11.6634)
+rotation = 0.436332
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_2und5")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 19)
+rotation = -0.436332
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_6q8t0")
