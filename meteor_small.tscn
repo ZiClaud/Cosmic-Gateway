@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl86rtspsgy1n"]
+
+[ext_resource type="Script" path="res://meteor.gd" id="1_eeglf"]
+[ext_resource type="Texture2D" uid="uid://q10fcop3ya5s" path="res://assets/PNG/Meteors/meteorBrown_small1.png" id="2_6jn68"]
+
+[node name="Meteor" type="Area2D" groups=["enemy"]]
+script = ExtResource("1_eeglf")
+max_speed = 300
+score = 5
+metadata/_edit_group_ = true
+
+[node name="MeteorBrownBig1" type="Sprite2D" parent="."]
+texture = ExtResource("2_6jn68")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-13, -3, -9, 8, 0, 12, 12, 4, 9, -11, -6, -12)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

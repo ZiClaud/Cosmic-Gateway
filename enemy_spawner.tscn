@@ -1,13 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://dd0ck8vdk8c3l"]
 
 [ext_resource type="Script" path="res://EnemySpawner.gd" id="1_t3rq1"]
-[ext_resource type="PackedScene" uid="uid://dew2fwyq6eato" path="res://meteor.tscn" id="2_o2rxi"]
+[ext_resource type="PackedScene" uid="uid://ck7b6bn1dtpcs" path="res://meteor_big.tscn" id="2_sfodb"]
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_t3rq1")
-enemy_tscn = ExtResource("2_o2rxi")
+enemy_tscn = ExtResource("2_sfodb")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

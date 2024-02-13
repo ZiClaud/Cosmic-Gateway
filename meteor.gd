@@ -1,7 +1,8 @@
 extends Node2D
 
 @export var max_speed: int = 200
-@export var score: int = 10
+@export var score: int = 20
+@export var destroyed_tscn: PackedScene
 
 var speed:Vector2
 
@@ -22,4 +23,14 @@ func _on_area_entered(area):
 	# Destroy meteor
 	self.queue_free()
 	CurrGame.increaseScore(score)
-	# TODO: create 2/3 smaller meteors
+	if destroyed_tscn != null:
+		spawn_meteor(20)
+		spawn_meteor(-20)
+
+
+func spawn_meteor(val:int):
+	var new_meteor = destroyed_tscn.instantiate()
+	new_meteor.position.x = self.position.x + val
+	new_meteor.position.y = self.position.y + val
+	
+	self.add_sibling(new_meteor)
