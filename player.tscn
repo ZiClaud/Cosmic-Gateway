@@ -12,16 +12,16 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_hxcxu"]
 radius = 29.2746
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_fgemd")
 laser_tscn = ExtResource("2_fyord")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
 shape = SubResource("CircleShape2D_hxcxu")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["player"]]
 shape = SubResource("CircleShape2D_hxcxu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

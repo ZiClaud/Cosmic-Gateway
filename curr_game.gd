@@ -15,7 +15,19 @@ func startLevel(lvl:int):
 		_score_needed = 500
 	elif (_level == 4):
 		_score_needed = 1000
-	
+	get_tree().change_scene_to_file("res://game.tscn")
+
+
+func endGame():
+	if didWin():
+		LevelSelection.unlockLevel(_level + 1)
+		startLevel(_level + 1)
+	else:
+		get_tree().change_scene_to_file("res://control.tscn")
+
+
+func quitGame():
+	get_tree().quit()
 
 
 func getLevel():
@@ -30,8 +42,6 @@ func didWin():
 
 func increaseScore(score:int):
 	_score += score
-	if didWin():
-		LevelSelection.unlockLevel(_level + 1)
 
 
 func getScore():

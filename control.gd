@@ -22,25 +22,21 @@ func _ready():
 
 
 func _on_quit_button_pressed():
-	get_tree().quit()
+	CurrGame.quitGame()
 
 
 func _on_lvl_1_button_pressed():
 	CurrGame.startLevel(1)
-	get_tree().change_scene_to_file("res://game.tscn")
 
 
 func _on_lvl_2_button_pressed():
 	CurrGame.startLevel(2)	
-	get_tree().change_scene_to_file("res://game.tscn")
 
 
 func _on_lvl_3_button_pressed():
 	CurrGame.startLevel(3)
-	get_tree().change_scene_to_file("res://game.tscn")
 
 
 func _on_lvl_4_button_pressed():
 	CurrGame.startLevel(4)
-	get_tree().change_scene_to_file("res://game.tscn")
 

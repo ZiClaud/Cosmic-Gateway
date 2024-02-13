@@ -70,7 +70,6 @@ func spawn_laser():
 		self.add_sibling(new_laser)
 
 
-
 func _on_area_entered(collider_area):
 	if collider_area.is_in_group("enemy"):
 		self.queue_free()
@@ -79,4 +78,5 @@ func _on_area_entered(collider_area):
 func _on_area_2d_area_entered(collider_area):
 	if collider_area.is_in_group("enemy"):
 		self.queue_free()
-		Utils.game_over(false)
+		CurrGame._score = 0
+		CurrGame.endGame()

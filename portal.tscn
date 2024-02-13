@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://bi2hq6wllo2u6"]
+
+[ext_resource type="Texture2D" uid="uid://dafiwonf5de04" path="res://assets/PNG/Effects/fire00.png" id="1_2qulc"]
+[ext_resource type="Script" path="res://portal.gd" id="1_ycgul"]
+[ext_resource type="Texture2D" uid="uid://bpeduin1akuf" path="res://assets/PNG/Parts/cockpitYellow_0.png" id="2_cj1b0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2yb7b"]
+radius = 18.2857
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_he7en"]
+size = Vector2(73.1429, 9.14286)
+
+[node name="Portal" type="Node2D"]
+scale = Vector2(1.75, 1.75)
+script = ExtResource("1_ycgul")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CockpitYellow0" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-56, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("2_cj1b0")
+
+[node name="CockpitYellow1" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(56, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("2_cj1b0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-54.8571, 0)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_2yb7b")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(54.8571, 0)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_2yb7b")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="Fire00" type="Sprite2D" parent="Area2D"]
+position = Vector2(20, 9.53674e-07)
+rotation = -1.5708
+scale = Vector2(1, 1)
+texture = ExtResource("1_2qulc")
+
+[node name="Fire01" type="Sprite2D" parent="Area2D"]
+position = Vector2(-20, 9.53674e-07)
+rotation = 1.5708
+scale = Vector2(1, 1)
+texture = ExtResource("1_2qulc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.08991e-06, -2.72478e-07)
+shape = SubResource("RectangleShape2D_he7en")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

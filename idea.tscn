@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://nds3dn7fygjc"]
+[gd_scene load_steps=16 format=3 uid="uid://nds3dn7fygjc"]
 
 [ext_resource type="Texture2D" uid="uid://sacdca68rcvi" path="res://assets/Backgrounds/black.png" id="1_00r60"]
 [ext_resource type="Texture2D" uid="uid://un0m0tpc1dbm" path="res://assets/PNG/Meteors/meteorBrown_big4.png" id="2_cqljy"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cc3tg0fwadw7i" path="res://assets/PNG/Enemies/enemyBlack1.png" id="12_obr3q"]
 [ext_resource type="Texture2D" uid="uid://dl4hketg8doyi" path="res://assets/PNG/Enemies/enemyBlack5.png" id="13_8dria"]
 [ext_resource type="Texture2D" uid="uid://bn6raiyunmuwl" path="res://assets/PNG/Lasers/laserBlue01.png" id="14_3vs6h"]
+[ext_resource type="PackedScene" uid="uid://bi2hq6wllo2u6" path="res://portal.tscn" id="15_a5nks"]
 
 [node name="Idea" type="Node2D"]
 
@@ -90,3 +91,6 @@ texture = ExtResource("14_3vs6h")
 position = Vector2(2623, 507)
 rotation = -1.213
 texture = ExtResource("14_3vs6h")
+
+[node name="Portal" parent="." instance=ExtResource("15_a5nks")]
+position = Vector2(576, 81)
