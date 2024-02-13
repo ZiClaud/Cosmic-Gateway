@@ -18,9 +18,14 @@ func _ready():
 	if (speedY < 0):
 		directionY = -1
 	
+	speedup_laser()
+
+
+func speedup_laser():
 	while speedX * directionX + speedY * directionY < min_speed:
-		speedX += 10 * directionX
-		speedY += 10 * directionY
+		speedX *= 1.1
+		speedY *= 1.1
+
 
 func _process(delta):
 	self.position.x -= speedX * delta
