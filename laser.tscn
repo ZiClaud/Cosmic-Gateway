@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://pq8ofv0les2i"]
+[gd_scene load_steps=5 format=3 uid="uid://pq8ofv0les2i"]
 
 [ext_resource type="Script" path="res://Laser.gd" id="1_ukw6a"]
 [ext_resource type="Texture2D" uid="uid://bjnx7v1jkt2sk" path="res://assets/PNG/Lasers/laserBlue08.png" id="2_jlbf3"]
+[ext_resource type="AudioStream" uid="uid://cb76kavy6gmno" path="res://assets/Bonus/sfx_laser1.ogg" id="3_bgl4f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_je6ha"]
 radius = 23.0217
@@ -16,5 +17,8 @@ texture = ExtResource("2_jlbf3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_je6ha")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_bgl4f")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

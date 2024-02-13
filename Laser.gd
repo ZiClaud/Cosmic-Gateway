@@ -2,6 +2,8 @@ extends Node2D
 
 @export var min_speed:int = 400
 
+@onready var audio:AudioStreamPlayer2D = $AudioStreamPlayer2D
+
 var speedX:float = 0
 var speedY:float = 0
 
@@ -19,6 +21,7 @@ func _ready():
 		directionY = -1
 	
 	speedup_laser()
+	audio.play()
 
 
 func speedup_laser():
