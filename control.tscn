@@ -50,6 +50,7 @@ offset_left = 376.0
 offset_top = 272.0
 offset_right = 536.0
 offset_bottom = 355.0
+disabled = true
 icon = ExtResource("5_qi48l")
 icon_alignment = 1
 
@@ -59,6 +60,7 @@ offset_left = 616.0
 offset_top = 272.0
 offset_right = 776.0
 offset_bottom = 355.0
+disabled = true
 icon = ExtResource("6_3li7d")
 icon_alignment = 1
 
@@ -68,6 +70,7 @@ offset_left = 864.0
 offset_top = 272.0
 offset_right = 1024.0
 offset_bottom = 355.0
+disabled = true
 icon = ExtResource("7_5shdv")
 icon_alignment = 1
 

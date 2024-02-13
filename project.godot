@@ -21,6 +21,10 @@ LevelSelection="*res://level_selection.gd"
 CurrGame="*res://curr_game.gd"
 Utils="*res://utils.gd"
 
+[display]
+
+mouse_cursor/custom_image="res://assets/PNG/UI/cursor.png"
+
 [input]
 
 ui_accept={

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://gkesgk0122oq"]
+[gd_scene load_steps=5 format=3 uid="uid://gkesgk0122oq"]
 
 [ext_resource type="PackedScene" uid="uid://dd0ck8vdk8c3l" path="res://enemy_spawner.tscn" id="1_hbq5f"]
 [ext_resource type="PackedScene" uid="uid://cad6u7v75t4rm" path="res://score_label.tscn" id="1_pyty6"]
 [ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://background.tscn" id="2_odnxg"]
 [ext_resource type="PackedScene" uid="uid://bxp8u8n88eu7" path="res://player.tscn" id="3_441n5"]
-[ext_resource type="PackedScene" uid="uid://dew2fwyq6eato" path="res://meteor.tscn" id="4_x4aar"]
 
 [node name="Game" type="Node2D"]
 
@@ -17,6 +16,3 @@ position = Vector2(35, 72)
 
 [node name="Player" parent="." instance=ExtResource("3_441n5")]
 position = Vector2(573, 327)
-
-[node name="Meteor" parent="." instance=ExtResource("4_x4aar")]
-position = Vector2(266, 256)
