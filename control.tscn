@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddb7bvepj2cwn"]
+[gd_scene load_steps=11 format=3 uid="uid://ddb7bvepj2cwn"]
 
 [ext_resource type="Script" path="res://control.gd" id="1_ey1j4"]
 [ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://background.tscn" id="2_8mf41"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://0pnlm1m8eo3e" path="res://assets/PNG/UI/numeral3.png" id="6_3li7d"]
 [ext_resource type="Texture2D" uid="uid://dl0ood68t7xff" path="res://assets/PNG/UI/numeral4.png" id="7_5shdv"]
 [ext_resource type="Texture2D" uid="uid://biy6dk7oa6kvc" path="res://assets/PNG/UI/numeralX.png" id="8_t7fsl"]
+[ext_resource type="PackedScene" uid="uid://n6qs4nhl40wl" path="res://high_score_label.tscn" id="9_x2fn8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_if805"]
 font = ExtResource("3_8xofx")
@@ -82,6 +83,13 @@ offset_right = 656.0
 offset_bottom = 499.0
 icon = ExtResource("8_t7fsl")
 icon_alignment = 1
+
+[node name="HighScoreLabel" parent="Control" instance=ExtResource("9_x2fn8")]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 616.0
+offset_right = 170.0
+offset_bottom = 639.0
 
 [connection signal="pressed" from="Control/Lvl1Button" to="." method="_on_lvl_1_button_pressed"]
 [connection signal="pressed" from="Control/Lvl2Button" to="." method="_on_lvl_2_button_pressed"]

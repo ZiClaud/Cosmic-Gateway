@@ -2,6 +2,7 @@ extends Node
 
 var _level:int
 var _score:int
+var _high_score:int = 0
 var _score_needed:int
 var _player_pos:Vector2
 
@@ -47,6 +48,15 @@ func increaseScore(score:int):
 
 func getScore():
 	return _score
+
+
+func getHighScore():
+	return _high_score
+
+
+func setHighScore():
+	if (_score > _high_score):
+		_high_score = _score
 
 
 func getScoreNeeded():
