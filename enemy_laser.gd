@@ -12,9 +12,9 @@ var directionY: int = 1
 
 
 func _ready(): # TODO: Fix this
-	var mouse_pos = get_global_mouse_position() 
-	speedX = -mouse_pos.x + self.position.x
-	speedY = -mouse_pos.y + self.position.y
+	var player_pos = CurrGame.getPlayerPos()
+	speedX = -player_pos.x + self.position.x
+	speedY = -player_pos.y + self.position.y
 	
 	if (speedX < 0):
 		directionX = -1
@@ -22,15 +22,18 @@ func _ready(): # TODO: Fix this
 		directionY = -1
 	
 	speedup_laser()
+	rotate_sprite()
 	audio.play()
 
 
-func rotate_sprite(): # TODO: To call on _ready()
+func rotate_sprite():
 	pass
 
 
 func speedup_laser():
-	pass
+	while speedX * directionX + speedY * directionY < min_speed:
+		speedX *= 1.1
+		speedY *= 1.1
 
 
 func _process(delta):
@@ -39,4 +42,5 @@ func _process(delta):
 
 
 func _on_area_entered(collider_area):
-	self.queue_free()
+	if !collider_area.is_in_group("enemy_ship"):
+		self.queue_free()

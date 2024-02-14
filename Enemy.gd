@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var enemy_laser_tscn: PackedScene
+
 @export var max_speed: int = 200
 @export var score: int = 50
 
@@ -14,16 +16,18 @@ func _ready():
 
 func _process(delta):
 	ai(delta)
+	face_player()
 	Utils.teleport(self)
 
 
-func _on_area_entered(area):
+func _on_area_entered(collider_area):
 	# Destroy ship
-	self.queue_free()
-	CurrGame.increaseScore(score)
+	if !collider_area.is_in_group("enemy_laser"):
+		self.queue_free()
+		CurrGame.increaseScore(score)
 
 
-func ai(delta): #TODO: Look at player and shoot red laser
+func ai(delta): # TODO: Maybe improve
 	self.position.x += speed.x * delta
 	self.position.y += speed.y * delta
 
@@ -32,10 +36,13 @@ func face_player():
 	pass
 
 
-func shoot():
-	pass
+func shoot_laser():
+	var new_laser = enemy_laser_tscn.instantiate()
+	new_laser.position = self.position
+	
+	self.add_sibling(new_laser)
 
 
 func _on_timer_timeout():
-	shoot()
+	shoot_laser()
 

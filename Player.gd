@@ -22,6 +22,7 @@ func _ready():
 func _physics_process(delta):
 	player_movement(delta)
 	spawn_laser()
+	CurrGame.setPlayerPos(self.position)
 	Utils.teleport(self)
 
 

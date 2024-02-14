@@ -3,6 +3,7 @@ extends Node
 var _level:int
 var _score:int
 var _score_needed:int
+var _player_pos:Vector2
 
 func startLevel(lvl:int):
 	_level = lvl
@@ -51,3 +52,10 @@ func getScore():
 func getScoreNeeded():
 	return _score_needed
 
+
+func setPlayerPos(position:Vector2):
+	_player_pos = position
+
+
+func getPlayerPos():
+	return _player_pos
