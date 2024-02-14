@@ -22,12 +22,12 @@ func _ready(): # TODO: Fix this
 		directionY = -1
 	
 	speedup_laser()
-	rotate_sprite()
+	rotate_sprite(player_pos)
 	audio.play()
 
 
-func rotate_sprite():
-	pass
+func rotate_sprite(player_pos:Vector2):
+	self.rotation = Utils.get_rotation_from_position(self.position, player_pos)
 
 
 func speedup_laser():

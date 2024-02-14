@@ -12,6 +12,7 @@ script = ExtResource("1_jwygr")
 enemy_laser_tscn = ExtResource("2_6ku6i")
 
 [node name="EnemyBlack3" type="Sprite2D" parent="."]
+rotation = -1.5708
 texture = ExtResource("2_iphij")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

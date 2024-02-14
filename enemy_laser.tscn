@@ -12,10 +12,11 @@ height = 52.0
 script = ExtResource("1_hoq4w")
 
 [node name="LaserRed01" type="Sprite2D" parent="."]
-rotation = -3.14159
+rotation = 1.5708
 texture = ExtResource("2_grlqb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_kifxm")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

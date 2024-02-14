@@ -33,7 +33,7 @@ func ai(delta): # TODO: Maybe improve
 
 
 func face_player():
-	pass
+	self.rotation = Utils.get_rotation_from_position(self.position, CurrGame.getPlayerPos())
 
 
 func shoot_laser():

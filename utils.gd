@@ -12,3 +12,7 @@ func teleport(node:Node2D):
 	if (node.position.y < -10):
 		node.position.y = viewport_y + 10
 
+
+func get_rotation_from_position(pos1: Vector2, pos2: Vector2) -> float:
+	return (pos2-pos1).angle()
+
