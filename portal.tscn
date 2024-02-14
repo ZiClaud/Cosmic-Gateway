@@ -52,4 +52,10 @@ shape = SubResource("RectangleShape2D_he7en")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_avraf")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emission_shape = 3
+emission_rect_extents = Vector2(40, 0)
+spread = 62.85
+gravity = Vector2(0, -980)
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

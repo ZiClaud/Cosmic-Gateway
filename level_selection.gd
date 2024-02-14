@@ -1,6 +1,6 @@
 extends Node
 
-var _unlocked_levels:int = 1
+var _unlocked_levels:int = 4
 
 func reset_values():
 	_unlocked_levels = 0

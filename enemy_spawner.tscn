@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd0ck8vdk8c3l"]
+[gd_scene load_steps=5 format=3 uid="uid://dd0ck8vdk8c3l"]
 
 [ext_resource type="Script" path="res://EnemySpawner.gd" id="1_t3rq1"]
 [ext_resource type="PackedScene" uid="uid://ck7b6bn1dtpcs" path="res://meteor_big.tscn" id="2_sfodb"]
+[ext_resource type="PackedScene" uid="uid://c13d428xd0u1b" path="res://meteor_indescructible.tscn" id="3_glw5l"]
 [ext_resource type="PackedScene" uid="uid://h5cfsrf0thxh" path="res://enemy.tscn" id="3_qa5re"]
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_t3rq1")
 meteor_tscn = ExtResource("2_sfodb")
+ind_meteor_tscn = ExtResource("3_glw5l")
 enemy_tscn = ExtResource("3_qa5re")
 
 [node name="Timer" type="Timer" parent="."]

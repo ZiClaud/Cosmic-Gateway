@@ -2,6 +2,7 @@ extends Node2D
 # Spawn every enemy every second
 
 @export var meteor_tscn: PackedScene
+@export var ind_meteor_tscn: PackedScene
 @export var enemy_tscn: PackedScene
 @export var start_time: float = 3.0
 @export var min_spawn_time: float = 0.5
@@ -14,6 +15,7 @@ var curr_times: int = 0
 
 func _ready():
 	timer.wait_time = start_time
+	indistrucible_spawn()
 
 func spawn_meteor():
 	var new_meteor = meteor_tscn.instantiate()
@@ -51,3 +53,23 @@ func _on_timer_timeout():
 		curr_times = 0
 		if timer.get_wait_time() > min_spawn_time:
 			timer.set_wait_time(timer.get_wait_time() - speedup_of)
+
+
+func indistrucible_spawn():
+	var new_meteor1 = ind_meteor_tscn.instantiate()
+	var new_meteor2 = ind_meteor_tscn.instantiate()
+	
+	var viewport_height:int = get_viewport_rect().size.y
+	new_meteor1.position.x = -100
+	new_meteor1.position.y = randi_range(0, viewport_height)
+	new_meteor2.position.x = -100
+	new_meteor2.position.y = randi_range(0, viewport_height)
+	
+	if (CurrGame.getLevel() == 2):
+		self.add_child(new_meteor1)
+	elif (CurrGame.getLevel() == 3):
+		self.add_child(new_meteor1)
+		self.add_child(new_meteor2)
+	elif (CurrGame.getLevel() == 4):
+		self.add_child(new_meteor1)
+		self.add_child(new_meteor2)
