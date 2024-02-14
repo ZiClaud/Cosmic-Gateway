@@ -19,37 +19,30 @@ script = ExtResource("1_ycgul")
 
 [node name="CockpitYellow0" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(-56, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("2_cj1b0")
 
 [node name="CockpitYellow1" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(56, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("2_cj1b0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-54.8571, 0)
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_2yb7b")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(54.8571, 0)
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_2yb7b")
 
-[node name="Area2D" type="Area2D" parent="."]
-scale = Vector2(1, 1)
+[node name="Area2D" type="Area2D" parent="." groups=["portal"]]
 
 [node name="Fire00" type="Sprite2D" parent="Area2D"]
 position = Vector2(20, 9.53674e-07)
 rotation = -1.5708
-scale = Vector2(1, 1)
 texture = ExtResource("1_2qulc")
 
 [node name="Fire01" type="Sprite2D" parent="Area2D"]
 position = Vector2(-20, 9.53674e-07)
 rotation = 1.5708
-scale = Vector2(1, 1)
 texture = ExtResource("1_2qulc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

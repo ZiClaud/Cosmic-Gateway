@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var min_speed:int = 400
+@export var min_speed:int = 800
 
 @onready var audio:AudioStreamPlayer2D = $AudioStreamPlayer2D
 
