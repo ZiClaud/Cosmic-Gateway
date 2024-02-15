@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var speed:int = 100
-@export var start_distance:int = -200
+@export var start_distance:int = -100
 
 @onready var audio:AudioStreamPlayer2D = $AudioStreamPlayer2D
 

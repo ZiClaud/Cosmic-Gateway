@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bms6fvfbec2pt"]
+[gd_scene load_steps=12 format=3 uid="uid://bms6fvfbec2pt"]
 
 [ext_resource type="Script" path="res://screen.gd" id="1_ww8q6"]
 [ext_resource type="FontFile" uid="uid://cj2bfbenla0y0" path="res://assets/Bonus/kenvector_future.ttf" id="1_xooj5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dl0ood68t7xff" path="res://assets/PNG/UI/numeral4.png" id="5_2a467"]
 [ext_resource type="Texture2D" uid="uid://biy6dk7oa6kvc" path="res://assets/PNG/UI/numeralX.png" id="6_nj1yb"]
 [ext_resource type="PackedScene" uid="uid://n6qs4nhl40wl" path="res://high_score_label.tscn" id="8_s5pgo"]
+[ext_resource type="PackedScene" uid="uid://cf8nekl1scbjc" path="res://credits.tscn" id="10_8gjp6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jejn0"]
 font = ExtResource("1_xooj5")
@@ -116,6 +117,11 @@ layout_mode = 2
 [node name="HighScoreLabel" parent="Control/MarginContainer" instance=ExtResource("8_s5pgo")]
 layout_mode = 2
 size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Credits" parent="Control/MarginContainer" instance=ExtResource("10_8gjp6")]
+layout_mode = 2
+size_flags_horizontal = 8
 size_flags_vertical = 8
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl1Button" to="." method="_on_lvl_1_button_pressed"]

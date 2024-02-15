@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf8nekl1scbjc"]
+
+[ext_resource type="FontFile" uid="uid://hywqxf05cit3" path="res://assets/Bonus/kenvector_future_thin.ttf" id="1_lqflc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fktb3"]
+font = ExtResource("1_lqflc")
+
+[node name="HighScoreLabel" type="Label"]
+offset_left = -56.0
+offset_top = -8.0
+offset_right = 65.0
+offset_bottom = 10.0
+text = "Made by ZiClaud"
+label_settings = SubResource("LabelSettings_fktb3")
+vertical_alignment = 2
