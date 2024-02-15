@@ -1,10 +1,10 @@
-extends Node2D
+extends Control
 
-@export var bg:Node2D
+#@export var bg:Node2D
 
-@onready var lvl2bt:Button = $Control/Lvl2Button
-@onready var lvl3bt:Button = $Control/Lvl3Button
-@onready var lvl4bt:Button = $Control/Lvl4Button
+@onready var lvl2bt:Button = $Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl2Button
+@onready var lvl3bt:Button = $Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl3Button
+@onready var lvl4bt:Button = $Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl4Button
 
 func _ready():
 	var unlocked_levels:int = LevelSelection.getUnlockedLevels()
@@ -15,7 +15,7 @@ func _ready():
 	elif unlocked_levels < 4:
 		lvl2bt.disabled = false
 		lvl3bt.disabled = false
-	elif unlocked_levels < 5:
+	else:
 		lvl2bt.disabled = false
 		lvl3bt.disabled = false
 		lvl4bt.disabled = false

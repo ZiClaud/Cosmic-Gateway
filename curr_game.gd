@@ -25,7 +25,7 @@ func endGame():
 		LevelSelection.unlockLevel(_level + 1)
 		startLevel(_level + 1)
 	else:
-		get_tree().change_scene_to_file("res://control.tscn")
+		get_tree().change_scene_to_file("res://screen.tscn")
 
 
 func quitGame():
@@ -44,6 +44,7 @@ func didWin():
 
 func increaseScore(score:int):
 	_score += score
+	_setHighScore()
 
 
 func getScore():
@@ -54,7 +55,7 @@ func getHighScore():
 	return _high_score
 
 
-func setHighScore():
+func _setHighScore():
 	if (_score > _high_score):
 		_high_score = _score
 

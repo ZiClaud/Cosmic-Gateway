@@ -1,0 +1,125 @@
+[gd_scene load_steps=11 format=3 uid="uid://bms6fvfbec2pt"]
+
+[ext_resource type="Script" path="res://screen.gd" id="1_ww8q6"]
+[ext_resource type="FontFile" uid="uid://cj2bfbenla0y0" path="res://assets/Bonus/kenvector_future.ttf" id="1_xooj5"]
+[ext_resource type="Texture2D" uid="uid://bxphmp5f0p8ry" path="res://assets/Backgrounds/blue.png" id="2_2tjgk"]
+[ext_resource type="Texture2D" uid="uid://c7lln2gfds13a" path="res://assets/PNG/UI/numeral1.png" id="2_el7nt"]
+[ext_resource type="Texture2D" uid="uid://5myfnlnwgl7o" path="res://assets/PNG/UI/numeral2.png" id="3_hx2yh"]
+[ext_resource type="Texture2D" uid="uid://0pnlm1m8eo3e" path="res://assets/PNG/UI/numeral3.png" id="4_demyx"]
+[ext_resource type="Texture2D" uid="uid://dl0ood68t7xff" path="res://assets/PNG/UI/numeral4.png" id="5_2a467"]
+[ext_resource type="Texture2D" uid="uid://biy6dk7oa6kvc" path="res://assets/PNG/UI/numeralX.png" id="6_nj1yb"]
+[ext_resource type="PackedScene" uid="uid://n6qs4nhl40wl" path="res://high_score_label.tscn" id="8_s5pgo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jejn0"]
+font = ExtResource("1_xooj5")
+font_size = 82
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ww8q6")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2tjgk")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 60
+
+[node name="Separator1" type="Control" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Cosmic Gateaway"
+label_settings = SubResource("LabelSettings_jejn0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Separator2" type="Control" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Lvl1Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+icon = ExtResource("2_el7nt")
+icon_alignment = 1
+
+[node name="Lvl2Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+disabled = true
+icon = ExtResource("3_hx2yh")
+icon_alignment = 1
+
+[node name="Lvl3Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+disabled = true
+icon = ExtResource("4_demyx")
+icon_alignment = 1
+
+[node name="Lvl4Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+disabled = true
+icon = ExtResource("5_2a467")
+icon_alignment = 1
+
+[node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("6_nj1yb")
+icon_alignment = 1
+
+[node name="Separator3" type="Control" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HighScoreLabel" parent="Control/MarginContainer" instance=ExtResource("8_s5pgo")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl1Button" to="." method="_on_lvl_1_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl2Button" to="." method="_on_lvl_2_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl3Button" to="." method="_on_lvl_3_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl4Button" to="." method="_on_lvl_4_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
