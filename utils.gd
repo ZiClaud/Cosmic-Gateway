@@ -22,3 +22,11 @@ func apply_destroyed_effect(curr_node:Node2D, destroyed_effect_tscn: PackedScene
 	effect.position = curr_node.position
 	
 	curr_node.add_sibling(effect)
+
+
+func skin_selector(skins:Array):
+	for skin in skins:
+		skin.visible = false
+	
+	skins.pick_random().visible = true
+

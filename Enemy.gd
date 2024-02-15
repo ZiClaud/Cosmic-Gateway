@@ -14,30 +14,8 @@ func _ready():
 	speed.x = rand_x
 	speed.y = rand_y
 	
-	skin_selector()
+	Utils.skin_selector([$SkinSprite1, $SkinSprite2, $SkinSprite3, $SkinSprite4, $SkinSprite5])
 
-func skin_selector():
-	var rand_skin:int = randi_range(1, 5)
-	var curr_skin:Sprite2D
-	
-	curr_skin = $SkinSprite1
-	curr_skin.visible = false
-	
-	if (rand_skin == 1):
-		curr_skin = $SkinSprite1
-		curr_skin.visible = true
-	elif (rand_skin == 2):
-		curr_skin = $SkinSprite2
-		curr_skin.visible = true
-	elif (rand_skin == 3):
-		curr_skin = $SkinSprite3
-		curr_skin.visible = true
-	elif (rand_skin == 4):
-		curr_skin = $SkinSprite4
-		curr_skin.visible = true
-	elif (rand_skin == 5):
-		curr_skin = $SkinSprite5
-		curr_skin.visible = true
 
 func _process(delta):
 	ai(delta)
