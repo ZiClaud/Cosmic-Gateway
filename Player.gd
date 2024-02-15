@@ -21,6 +21,29 @@ func _ready():
 	var len_y:int = get_viewport_rect().size.y
 	self.position.x = len_x / 2
 	self.position.y = len_y / 2
+	
+	skin_selector()
+
+
+func skin_selector():
+	var rand_skin:int = randi_range(1, 4)
+	var curr_skin:Sprite2D
+	
+	curr_skin = $SkinSprite1
+	curr_skin.visible = false
+	
+	if (rand_skin == 1):
+		curr_skin = $SkinSprite1
+		curr_skin.visible = true
+	elif (rand_skin == 2):
+		curr_skin = $SkinSprite2
+		curr_skin.visible = true
+	elif (rand_skin == 3):
+		curr_skin = $SkinSprite3
+		curr_skin.visible = true
+	elif (rand_skin == 4):
+		curr_skin = $SkinSprite4
+		curr_skin.visible = true
 
 
 func _physics_process(delta):
