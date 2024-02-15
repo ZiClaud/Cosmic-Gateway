@@ -3,6 +3,7 @@ extends Node2D
 @export var max_speed: int = 200
 @export var score: int = 20
 @export var destroyed_tscn: PackedScene
+@export var destroyed_effect_tscn: PackedScene
 
 var speed:Vector2
 
@@ -21,6 +22,7 @@ func _process(delta):
 
 func _on_area_entered(area):
 	# Destroy meteor
+	Utils.apply_destroyed_effect(self, destroyed_effect_tscn)
 	self.queue_free()
 	CurrGame.increaseScore(score)
 	if destroyed_tscn != null:

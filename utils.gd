@@ -16,3 +16,9 @@ func teleport(node:Node2D):
 func get_rotation_from_position(pos1: Vector2, pos2: Vector2) -> float:
 	return (pos2-pos1).angle()
 
+
+func apply_destroyed_effect(curr_node:Node2D, destroyed_effect_tscn: PackedScene) -> void:
+	var effect:Node = destroyed_effect_tscn.instantiate()
+	effect.position = curr_node.position
+	
+	curr_node.add_sibling(effect)

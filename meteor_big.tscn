@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck7b6bn1dtpcs"]
+[gd_scene load_steps=5 format=3 uid="uid://ck7b6bn1dtpcs"]
 
 [ext_resource type="Script" path="res://meteor.gd" id="1_tm22x"]
 [ext_resource type="PackedScene" uid="uid://dwy1k5h0i553g" path="res://meteor_med.tscn" id="2_8w2kh"]
 [ext_resource type="Texture2D" uid="uid://csgxvuq35ducx" path="res://assets/PNG/Meteors/meteorBrown_big1.png" id="2_tl5gn"]
+[ext_resource type="PackedScene" uid="uid://o3l35ra72t3n" path="res://destroyed_effect.tscn" id="3_b7vbs"]
 
 [node name="Meteor" type="Area2D" groups=["enemy"]]
 script = ExtResource("1_tm22x")
 destroyed_tscn = ExtResource("2_8w2kh")
+destroyed_effect_tscn = ExtResource("3_b7vbs")
 metadata/_edit_group_ = true
 
 [node name="MeteorBrownBig1" type="Sprite2D" parent="."]

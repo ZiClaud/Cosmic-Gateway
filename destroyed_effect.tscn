@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://o3l35ra72t3n"]
+
+[ext_resource type="Script" path="res://destroyed_effect.gd" id="1_1q626"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lyk8i"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 25.0
+initial_velocity_max = 25.0
+gravity = Vector3(0, 0, 0)
+color = Color(0.737255, 0.737255, 0.737255, 0.65098)
+
+[node name="DestroyedEffect" type="Node2D"]
+script = ExtResource("1_1q626")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_lyk8i")
+explosiveness = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

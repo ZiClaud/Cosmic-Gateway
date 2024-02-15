@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var enemy_laser_tscn: PackedScene
+@export var destroyed_effect_tscn: PackedScene
 
 @export var max_speed: int = 200
 @export var score: int = 50
@@ -47,8 +48,9 @@ func _process(delta):
 func _on_area_entered(collider_area):
 	# Destroy ship
 	if !collider_area.is_in_group("enemy_laser"):
-		self.queue_free()
+		Utils.apply_destroyed_effect(self, destroyed_effect_tscn)
 		CurrGame.increaseScore(score)
+		self.queue_free()
 
 
 func ai(delta): # TODO: Maybe improve
