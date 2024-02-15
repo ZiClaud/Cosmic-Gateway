@@ -13,10 +13,13 @@ extends Node2D
 @onready var timer:Timer = $Timer
 
 var curr_times: int = 0
+var stage1: bool = false
+var stage2: bool = false
 
 func _ready():
 	timer.wait_time = start_time
 	indistrucible_spawn()
+
 
 func spawn_meteor():
 	var new_meteor = meteor_tscn.instantiate()
@@ -48,6 +51,7 @@ func _on_timer_timeout():
 	else:
 		spawn_meteor()
 		spawn_enemy()
+		spawn_boss()
 	
 	curr_times += 1
 	if curr_times > speedup_after:
@@ -74,3 +78,26 @@ func indistrucible_spawn():
 	elif (CurrGame.getLevel() == 4):
 		self.add_child(new_meteor1)
 		self.add_child(new_meteor2)
+
+
+func spawn_boss():
+	if (CurrGame.getScore() > 1000 && !stage1):
+		print("Stage 1!")
+		_spawn_boss()
+		stage1=true
+	elif (CurrGame.getScore() > 3000 && !stage2):
+		_spawn_boss()
+		_spawn_boss()
+		_spawn_boss()
+		stage2=true
+
+
+func _spawn_boss():
+	var new_boss = boss_tscn.instantiate()
+	
+	var viewport_height:int = get_viewport_rect().size.y
+	var rand_y:int = randi_range(0, viewport_height)
+	new_boss.position.x = -100
+	new_boss.position.y = rand_y
+	
+	self.add_child(new_boss)
