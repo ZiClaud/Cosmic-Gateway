@@ -17,6 +17,10 @@ func _ready():
 	beanLeft = $Beans/BeamLeft
 	beanUp = $Beans/BeamUp
 	beanDown = $Beans/BeamDown
+	var len_x:int = get_viewport_rect().size.x
+	var len_y:int = get_viewport_rect().size.y
+	self.position.x = len_x / 2
+	self.position.y = len_y / 2
 
 
 func _physics_process(delta):
