@@ -1,22 +1,26 @@
 [gd_scene load_steps=6 format=3 uid="uid://gkesgk0122oq"]
 
 [ext_resource type="PackedScene" uid="uid://dd0ck8vdk8c3l" path="res://enemy_spawner.tscn" id="1_hbq5f"]
-[ext_resource type="PackedScene" uid="uid://cad6u7v75t4rm" path="res://score_label.tscn" id="1_pyty6"]
+[ext_resource type="PackedScene" uid="uid://bk545kmppfmhg" path="res://game_ui.tscn" id="1_nctk4"]
 [ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://background.tscn" id="2_odnxg"]
 [ext_resource type="PackedScene" uid="uid://bxp8u8n88eu7" path="res://player.tscn" id="3_441n5"]
 [ext_resource type="PackedScene" uid="uid://bi2hq6wllo2u6" path="res://portal.tscn" id="5_w6mu4"]
 
 [node name="Game" type="Node2D"]
 
-[node name="ScoreLabel" parent="." instance=ExtResource("1_pyty6")]
+[node name="Node" type="Node" parent="."]
+
+[node name="GameUI" parent="Node" instance=ExtResource("1_nctk4")]
 
 [node name="EnemySpawner" parent="." instance=ExtResource("1_hbq5f")]
 
 [node name="Background" parent="." instance=ExtResource("2_odnxg")]
 position = Vector2(35, 72)
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_441n5")]
 position = Vector2(580, 325)
 
 [node name="Portal" parent="." instance=ExtResource("5_w6mu4")]
 position = Vector2(580, -100)
+metadata/_edit_lock_ = true

@@ -5,6 +5,7 @@ var _score:int
 var _high_score:int = 0
 var _score_needed:int
 var _player_pos:Vector2
+var _boss_hp:int = 0
 
 func startLevel(lvl:int):
 	_level = lvl
@@ -70,3 +71,12 @@ func setPlayerPos(position:Vector2):
 
 func getPlayerPos():
 	return _player_pos
+
+
+func setBossHp(hp:int):
+	_boss_hp = hp
+
+
+func getBossHp():
+	return _boss_hp
+

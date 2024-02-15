@@ -4,6 +4,7 @@ extends Node2D
 @export var meteor_tscn: PackedScene
 @export var ind_meteor_tscn: PackedScene
 @export var enemy_tscn: PackedScene
+@export var boss_tscn: PackedScene
 @export var start_time: float = 3.0
 @export var min_spawn_time: float = 0.5
 @export var speedup_after: int = 5

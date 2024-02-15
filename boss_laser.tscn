@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb8lyfc2j8fjp"]
+
+[ext_resource type="Script" path="res://enemy_laser.gd" id="1_s7bdc"]
+[ext_resource type="Texture2D" uid="uid://jvxwqvesbiok" path="res://assets/PNG/Lasers/laserRed08.png" id="2_vyvsa"]
+[ext_resource type="AudioStream" uid="uid://hsfyrfulutgu" path="res://assets/Bonus/sfx_laser2.ogg" id="3_fa5al"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2xm3y"]
+radius = 13.0384
+
+[node name="EnemyLaser" type="Area2D" groups=["enemy", "enemy_laser"]]
+script = ExtResource("1_s7bdc")
+
+[node name="LaserRed01" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_vyvsa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CircleShape2D_2xm3y")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fa5al")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
