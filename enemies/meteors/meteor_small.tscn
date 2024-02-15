@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dl86rtspsgy1n"]
 
-[ext_resource type="Script" path="res://meteor.gd" id="1_eeglf"]
-[ext_resource type="PackedScene" uid="uid://o3l35ra72t3n" path="res://destroyed_effect.tscn" id="2_0svbo"]
+[ext_resource type="Script" path="res://enemies/meteors/meteor.gd" id="1_eeglf"]
+[ext_resource type="PackedScene" uid="uid://o3l35ra72t3n" path="res://effects/destroyed_effect.tscn" id="2_0svbo"]
 [ext_resource type="Texture2D" uid="uid://q10fcop3ya5s" path="res://assets/PNG/Meteors/meteorBrown_small1.png" id="2_6jn68"]
 [ext_resource type="Texture2D" uid="uid://djgss2fl18t8p" path="res://assets/PNG/Meteors/meteorBrown_small2.png" id="4_6sovm"]
 

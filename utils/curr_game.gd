@@ -18,15 +18,16 @@ func startLevel(lvl:int):
 		_score_needed = 500
 	elif (_level == 4):
 		_score_needed = 1000
-	get_tree().change_scene_to_file("res://game.tscn")
+	get_tree().change_scene_to_file("res://game/game.tscn")
 
 
 func endGame():
+	setBossHp(0)
 	if didWin():
 		LevelSelection.unlockLevel(_level + 1)
 		startLevel(_level + 1)
 	else:
-		get_tree().change_scene_to_file("res://screen.tscn")
+		get_tree().change_scene_to_file("res://ui/screen.tscn")
 
 
 func quitGame():

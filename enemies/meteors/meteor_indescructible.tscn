@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c13d428xd0u1b"]
 
-[ext_resource type="Script" path="res://MeteorIndescructible.gd" id="1_qr8fu"]
+[ext_resource type="Script" path="res://enemies/meteors/MeteorIndescructible.gd" id="1_qr8fu"]
 [ext_resource type="Texture2D" uid="uid://0g3cs3sqi7qh" path="res://assets/PNG/Meteors/meteorGrey_big4.png" id="2_itl2f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cxmd2"]

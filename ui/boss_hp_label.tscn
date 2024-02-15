@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bek5gke0s1k7u"]
 
 [ext_resource type="FontFile" uid="uid://hywqxf05cit3" path="res://assets/Bonus/kenvector_future_thin.ttf" id="1_r47c5"]
-[ext_resource type="Script" path="res://boss_hp_label.gd" id="2_gbu44"]
+[ext_resource type="Script" path="res://ui/boss_hp_label.gd" id="2_gbu44"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fktb3"]
 font = ExtResource("1_r47c5")

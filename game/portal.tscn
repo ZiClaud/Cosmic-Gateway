@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bi2hq6wllo2u6"]
 
 [ext_resource type="Texture2D" uid="uid://dafiwonf5de04" path="res://assets/PNG/Effects/fire00.png" id="1_2qulc"]
-[ext_resource type="Script" path="res://portal.gd" id="1_ycgul"]
+[ext_resource type="Script" path="res://game/portal.gd" id="1_ycgul"]
 [ext_resource type="Texture2D" uid="uid://bpeduin1akuf" path="res://assets/PNG/Parts/cockpitYellow_0.png" id="2_cj1b0"]
 [ext_resource type="AudioStream" uid="uid://k3jqjtat3bw2" path="res://assets/Bonus/sfx_lose.ogg" id="4_avraf"]
 

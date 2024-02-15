@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://yw4nfln5n6lw"]
 
-[ext_resource type="Script" path="res://enemy_laser.gd" id="1_hoq4w"]
+[ext_resource type="Script" path="res://weapons/enemy_laser.gd" id="1_hoq4w"]
 [ext_resource type="Texture2D" uid="uid://bosgllpcqrwvl" path="res://assets/PNG/Lasers/laserRed01.png" id="2_grlqb"]
 [ext_resource type="AudioStream" uid="uid://hsfyrfulutgu" path="res://assets/Bonus/sfx_laser2.ogg" id="3_ef88d"]
 

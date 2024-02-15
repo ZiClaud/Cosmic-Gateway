@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bk545kmppfmhg"]
 
-[ext_resource type="PackedScene" uid="uid://cad6u7v75t4rm" path="res://score_label.tscn" id="1_12oxn"]
-[ext_resource type="PackedScene" uid="uid://bek5gke0s1k7u" path="res://boss_hp_label.tscn" id="2_md4am"]
+[ext_resource type="PackedScene" uid="uid://cad6u7v75t4rm" path="res://ui/score_label.tscn" id="1_12oxn"]
+[ext_resource type="PackedScene" uid="uid://bek5gke0s1k7u" path="res://ui/boss_hp_label.tscn" id="2_md4am"]
 
 [node name="GameUI" type="Control"]
 layout_mode = 3

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://n6qs4nhl40wl"]
 
 [ext_resource type="FontFile" uid="uid://hywqxf05cit3" path="res://assets/Bonus/kenvector_future_thin.ttf" id="1_ldo33"]
-[ext_resource type="Script" path="res://high_score_label.gd" id="2_pcjt5"]
+[ext_resource type="Script" path="res://ui/high_score_label.gd" id="2_pcjt5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fktb3"]
 font = ExtResource("1_ldo33")

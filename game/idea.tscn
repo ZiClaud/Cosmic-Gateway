@@ -1,0 +1,96 @@
+[gd_scene load_steps=16 format=3 uid="uid://nds3dn7fygjc"]
+
+[ext_resource type="Texture2D" uid="uid://sacdca68rcvi" path="res://assets/Backgrounds/black.png" id="1_507ia"]
+[ext_resource type="Texture2D" uid="uid://un0m0tpc1dbm" path="res://assets/PNG/Meteors/meteorBrown_big4.png" id="2_fbcp2"]
+[ext_resource type="Texture2D" uid="uid://bvsclnqdfbsxk" path="res://assets/PNG/Meteors/meteorBrown_tiny1.png" id="3_3orja"]
+[ext_resource type="Texture2D" uid="uid://q10fcop3ya5s" path="res://assets/PNG/Meteors/meteorBrown_small1.png" id="4_wlnfv"]
+[ext_resource type="Texture2D" uid="uid://b155pn4jo53cv" path="res://assets/PNG/Meteors/meteorGrey_tiny1.png" id="5_gsg4e"]
+[ext_resource type="Texture2D" uid="uid://cwdfsoyjmr1pb" path="res://assets/PNG/Power-ups/shield_gold.png" id="6_2d23s"]
+[ext_resource type="Texture2D" uid="uid://vry7xx3qher4" path="res://assets/PNG/Power-ups/bolt_gold.png" id="7_e724x"]
+[ext_resource type="Texture2D" uid="uid://c2ult01rjhvo8" path="res://assets/PNG/ufoGreen.png" id="8_ry0s5"]
+[ext_resource type="Texture2D" uid="uid://b0l0hgt7u2pb7" path="res://assets/PNG/Lasers/laserGreen15.png" id="9_oir1j"]
+[ext_resource type="Texture2D" uid="uid://bxphmp5f0p8ry" path="res://assets/Backgrounds/blue.png" id="10_sfqhp"]
+[ext_resource type="Texture2D" uid="uid://jrm3u7kycsp2" path="res://assets/PNG/ufoRed.png" id="11_u1q2y"]
+[ext_resource type="Texture2D" uid="uid://cc3tg0fwadw7i" path="res://assets/PNG/Enemies/enemyBlack1.png" id="12_ysu03"]
+[ext_resource type="Texture2D" uid="uid://dl4hketg8doyi" path="res://assets/PNG/Enemies/enemyBlack5.png" id="13_5ox2g"]
+[ext_resource type="Texture2D" uid="uid://bn6raiyunmuwl" path="res://assets/PNG/Lasers/laserBlue01.png" id="14_6is1f"]
+[ext_resource type="PackedScene" uid="uid://bi2hq6wllo2u6" path="res://game/portal.tscn" id="15_bd51h"]
+
+[node name="Idea" type="Node2D"]
+
+[node name="Lvl1" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Lvl1"]
+position = Vector2(576, 314)
+scale = Vector2(5.79688, 5.79688)
+texture = ExtResource("1_507ia")
+
+[node name="MeteorBrownBig4" type="Sprite2D" parent="Lvl1"]
+position = Vector2(160, 194)
+texture = ExtResource("2_fbcp2")
+
+[node name="MeteorBrownTiny1" type="Sprite2D" parent="Lvl1"]
+position = Vector2(939, 248)
+texture = ExtResource("3_3orja")
+
+[node name="MeteorBrownSmall1" type="Sprite2D" parent="Lvl1"]
+position = Vector2(320, 467)
+texture = ExtResource("4_wlnfv")
+
+[node name="MeteorGreyTiny1" type="Sprite2D" parent="Lvl1"]
+position = Vector2(1042, 566)
+texture = ExtResource("5_gsg4e")
+
+[node name="ShieldGold" type="Sprite2D" parent="Lvl1"]
+position = Vector2(331, 183)
+texture = ExtResource("6_2d23s")
+
+[node name="BoltGold" type="Sprite2D" parent="Lvl1"]
+position = Vector2(905, 515)
+texture = ExtResource("7_e724x")
+
+[node name="UfoGreen" type="Sprite2D" parent="Lvl1"]
+position = Vector2(472, 349)
+texture = ExtResource("8_ry0s5")
+
+[node name="LaserGreen15" type="Sprite2D" parent="Lvl1"]
+position = Vector2(265, 256)
+texture = ExtResource("9_oir1j")
+
+[node name="LaserGreen16" type="Sprite2D" parent="Lvl1"]
+position = Vector2(858, 108)
+texture = ExtResource("9_oir1j")
+
+[node name="Lvl2" type="Node2D" parent="."]
+
+[node name="Blue" type="Sprite2D" parent="Lvl2"]
+position = Vector2(2428.5, 296.75)
+scale = Vector2(6.08984, 5.83789)
+texture = ExtResource("10_sfqhp")
+
+[node name="UfoRed" type="Sprite2D" parent="Lvl2"]
+position = Vector2(2328, 414)
+texture = ExtResource("11_u1q2y")
+
+[node name="EnemyBlack1" type="Sprite2D" parent="Lvl2"]
+position = Vector2(2041, 240)
+rotation = -0.837758
+texture = ExtResource("12_ysu03")
+
+[node name="EnemyBlack5" type="Sprite2D" parent="Lvl2"]
+position = Vector2(2804, 565)
+rotation = 1.91463
+texture = ExtResource("13_5ox2g")
+
+[node name="LaserBlue01" type="Sprite2D" parent="Lvl2"]
+position = Vector2(2141, 298)
+rotation = 2.09439
+texture = ExtResource("14_6is1f")
+
+[node name="LaserBlue02" type="Sprite2D" parent="Lvl2"]
+position = Vector2(2623, 507)
+rotation = -1.213
+texture = ExtResource("14_6is1f")
+
+[node name="Portal" parent="." instance=ExtResource("15_bd51h")]
+position = Vector2(576, 81)

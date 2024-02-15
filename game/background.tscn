@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://btnf3bbaaowe6"]
 
 [ext_resource type="Texture2D" uid="uid://sacdca68rcvi" path="res://assets/Backgrounds/black.png" id="1_d2ykx"]
-[ext_resource type="Script" path="res://background.gd" id="1_eu22v"]
+[ext_resource type="Script" path="res://game/background.gd" id="1_eu22v"]
 [ext_resource type="Texture2D" uid="uid://bxphmp5f0p8ry" path="res://assets/Backgrounds/blue.png" id="2_x2p0x"]
 [ext_resource type="Texture2D" uid="uid://7x4pydabsu21" path="res://assets/Backgrounds/darkPurple.png" id="3_lyaqo"]
 [ext_resource type="Texture2D" uid="uid://vasvu3ojdih6" path="res://assets/Backgrounds/purple.png" id="4_8v8c8"]

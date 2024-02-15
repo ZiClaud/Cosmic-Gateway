@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="Cosmic-Gateway"
-run/main_scene="res://screen.tscn"
+run/main_scene="res://ui/screen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://assets/PNG/ufoBlue.png"
 
 [autoload]
 
-LevelSelection="*res://level_selection.gd"
-CurrGame="*res://curr_game.gd"
-Utils="*res://utils.gd"
+LevelSelection="*res://game/level_selection.gd"
+CurrGame="*res://utils/curr_game.gd"
+Utils="*res://utils/utils.gd"
 
 [display]
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://ck7b6bn1dtpcs"]
 
-[ext_resource type="Script" path="res://meteor.gd" id="1_tm22x"]
-[ext_resource type="PackedScene" uid="uid://dwy1k5h0i553g" path="res://meteor_med.tscn" id="2_8w2kh"]
+[ext_resource type="Script" path="res://enemies/meteors/meteor.gd" id="1_tm22x"]
+[ext_resource type="PackedScene" uid="uid://dwy1k5h0i553g" path="res://enemies/meteors/meteor_med.tscn" id="2_8w2kh"]
 [ext_resource type="Texture2D" uid="uid://csgxvuq35ducx" path="res://assets/PNG/Meteors/meteorBrown_big1.png" id="2_tl5gn"]
-[ext_resource type="PackedScene" uid="uid://o3l35ra72t3n" path="res://destroyed_effect.tscn" id="3_b7vbs"]
+[ext_resource type="PackedScene" uid="uid://o3l35ra72t3n" path="res://effects/destroyed_effect.tscn" id="3_b7vbs"]
 [ext_resource type="Texture2D" uid="uid://dbra5jva6maxm" path="res://assets/PNG/Meteors/meteorBrown_big3.png" id="5_1dnpy"]
 
 [node name="Meteor" type="Area2D" groups=["enemy"]]

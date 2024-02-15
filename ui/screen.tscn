@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bms6fvfbec2pt"]
 
-[ext_resource type="Script" path="res://screen.gd" id="1_ww8q6"]
+[ext_resource type="Script" path="res://ui/screen.gd" id="1_ww8q6"]
 [ext_resource type="FontFile" uid="uid://cj2bfbenla0y0" path="res://assets/Bonus/kenvector_future.ttf" id="1_xooj5"]
 [ext_resource type="Texture2D" uid="uid://bxphmp5f0p8ry" path="res://assets/Backgrounds/blue.png" id="2_2tjgk"]
 [ext_resource type="Texture2D" uid="uid://c7lln2gfds13a" path="res://assets/PNG/UI/numeral1.png" id="2_el7nt"]
@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://0pnlm1m8eo3e" path="res://assets/PNG/UI/numeral3.png" id="4_demyx"]
 [ext_resource type="Texture2D" uid="uid://dl0ood68t7xff" path="res://assets/PNG/UI/numeral4.png" id="5_2a467"]
 [ext_resource type="Texture2D" uid="uid://biy6dk7oa6kvc" path="res://assets/PNG/UI/numeralX.png" id="6_nj1yb"]
-[ext_resource type="PackedScene" uid="uid://n6qs4nhl40wl" path="res://high_score_label.tscn" id="8_s5pgo"]
-[ext_resource type="PackedScene" uid="uid://cf8nekl1scbjc" path="res://credits.tscn" id="10_8gjp6"]
+[ext_resource type="PackedScene" uid="uid://n6qs4nhl40wl" path="res://ui/high_score_label.tscn" id="8_s5pgo"]
+[ext_resource type="PackedScene" uid="uid://cf8nekl1scbjc" path="res://ui/credits.tscn" id="10_8gjp6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jejn0"]
 font = ExtResource("1_xooj5")

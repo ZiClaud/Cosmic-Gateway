@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://o3l35ra72t3n"]
 
-[ext_resource type="Script" path="res://destroyed_effect.gd" id="1_1q626"]
+[ext_resource type="Script" path="res://effects/destroyed_effect.gd" id="1_vhtax"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lyk8i"]
 lifetime_randomness = 0.5
@@ -12,7 +12,7 @@ gravity = Vector3(0, 0, 0)
 color = Color(0.737255, 0.737255, 0.737255, 0.65098)
 
 [node name="DestroyedEffect" type="Node2D"]
-script = ExtResource("1_1q626")
+script = ExtResource("1_vhtax")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 amount = 20
