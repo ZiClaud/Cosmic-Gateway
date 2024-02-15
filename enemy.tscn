@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://h5cfsrf0thxh"]
+[gd_scene load_steps=9 format=3 uid="uid://h5cfsrf0thxh"]
 
 [ext_resource type="Script" path="res://Enemy.gd" id="1_jwygr"]
 [ext_resource type="PackedScene" uid="uid://yw4nfln5n6lw" path="res://enemy_laser.tscn" id="2_6ku6i"]
 [ext_resource type="Texture2D" uid="uid://dqb0onjqyxnhp" path="res://assets/PNG/Enemies/enemyBlack3.png" id="2_iphij"]
+[ext_resource type="Texture2D" uid="uid://cc3tg0fwadw7i" path="res://assets/PNG/Enemies/enemyBlack1.png" id="3_djbxw"]
+[ext_resource type="Texture2D" uid="uid://c436ai5gbtce1" path="res://assets/PNG/Enemies/enemyBlack2.png" id="4_mf13y"]
+[ext_resource type="Texture2D" uid="uid://cry6u8lxhcyso" path="res://assets/PNG/Enemies/enemyBlack4.png" id="6_qhhyu"]
+[ext_resource type="Texture2D" uid="uid://dl4hketg8doyi" path="res://assets/PNG/Enemies/enemyBlack5.png" id="7_8rs83"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yxs8o"]
 radius = 50.0899
@@ -11,9 +15,29 @@ radius = 50.0899
 script = ExtResource("1_jwygr")
 enemy_laser_tscn = ExtResource("2_6ku6i")
 
-[node name="EnemyBlack3" type="Sprite2D" parent="."]
+[node name="SkinSprite1" type="Sprite2D" parent="."]
+rotation = -1.5708
+texture = ExtResource("3_djbxw")
+
+[node name="SkinSprite2" type="Sprite2D" parent="."]
+visible = false
+rotation = -1.5708
+texture = ExtResource("4_mf13y")
+
+[node name="SkinSprite3" type="Sprite2D" parent="."]
+visible = false
 rotation = -1.5708
 texture = ExtResource("2_iphij")
+
+[node name="SkinSprite4" type="Sprite2D" parent="."]
+visible = false
+rotation = -1.5708
+texture = ExtResource("6_qhhyu")
+
+[node name="SkinSprite5" type="Sprite2D" parent="."]
+visible = false
+rotation = -1.5708
+texture = ExtResource("7_8rs83")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_yxs8o")
