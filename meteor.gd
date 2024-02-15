@@ -12,6 +12,8 @@ func _ready():
 	var rand_y:int = randi_range(-max_speed, max_speed)
 	speed.x = rand_x
 	speed.y = rand_y
+	
+	Utils.skin_selector([$SkinSprite1, $SkinSprite2])
 
 
 func _process(delta):
