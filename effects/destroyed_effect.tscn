@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://o3l35ra72t3n"]
+[gd_scene load_steps=4 format=3 uid="uid://o3l35ra72t3n"]
 
 [ext_resource type="Script" path="res://effects/destroyed_effect.gd" id="1_vhtax"]
+[ext_resource type="AudioStream" uid="uid://dkfq3eg42pffb" path="res://assets/Bonus/explosion2.wav" id="2_07pce"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lyk8i"]
 lifetime_randomness = 0.5
@@ -22,5 +23,10 @@ explosiveness = 1.0
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_07pce")
+volume_db = -0.405
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
