@@ -6,6 +6,7 @@ extends Control
 @onready var lvl3bt:Button = $Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl3Button
 @onready var lvl4bt:Button = $Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl4Button
 
+
 func _ready():
 	var unlocked_levels:int = LevelSelection.getUnlockedLevels()
 	if unlocked_levels < 2:
@@ -19,6 +20,10 @@ func _ready():
 		lvl2bt.disabled = false
 		lvl3bt.disabled = false
 		lvl4bt.disabled = false
+
+
+func _on_settings_button_pressed():
+	get_tree().change_scene_to_file("res://ui/settings_page.tscn")
 
 
 func _on_quit_button_pressed():
@@ -39,4 +44,3 @@ func _on_lvl_3_button_pressed():
 
 func _on_lvl_4_button_pressed():
 	CurrGame.startLevel(4)
-

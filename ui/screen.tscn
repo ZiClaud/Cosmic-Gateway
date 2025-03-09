@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bms6fvfbec2pt"]
+[gd_scene load_steps=13 format=3 uid="uid://bms6fvfbec2pt"]
 
 [ext_resource type="Script" path="res://ui/screen.gd" id="1_ww8q6"]
 [ext_resource type="FontFile" uid="uid://cj2bfbenla0y0" path="res://assets/Bonus/kenvector_future.ttf" id="1_xooj5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dl0ood68t7xff" path="res://assets/PNG/UI/numeral4.png" id="5_2a467"]
 [ext_resource type="Texture2D" uid="uid://biy6dk7oa6kvc" path="res://assets/PNG/UI/numeralX.png" id="6_nj1yb"]
 [ext_resource type="PackedScene" uid="uid://n6qs4nhl40wl" path="res://ui/high_score_label.tscn" id="8_s5pgo"]
+[ext_resource type="Texture2D" uid="uid://xeel0jkfrk3i" path="res://assets/PNG/UI/numeral0.png" id="8_tthhs"]
 [ext_resource type="PackedScene" uid="uid://cf8nekl1scbjc" path="res://ui/credits.tscn" id="10_8gjp6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jejn0"]
@@ -104,7 +105,19 @@ disabled = true
 icon = ExtResource("5_2a467")
 icon_alignment = 1
 
-[node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="SettingsButton" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("8_tthhs")
+icon_alignment = 1
+
+[node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(150, 75)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -128,4 +141,5 @@ size_flags_vertical = 8
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl2Button" to="." method="_on_lvl_2_button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl3Button" to="." method="_on_lvl_3_button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl4Button" to="." method="_on_lvl_4_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer2/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]

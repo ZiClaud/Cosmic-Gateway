@@ -1,5 +1,16 @@
 extends Node2D
 
+var _movement_default: bool = true
+
+
+func is_movement_default() -> bool:
+	return _movement_default
+
+
+func toggle_movement_default() -> void:
+	_movement_default = !_movement_default
+
+
 func teleport(node:Node2D):
 	var viewport_x:int = get_viewport_rect().size.x
 	var viewport_y:int = get_viewport_rect().size.y
