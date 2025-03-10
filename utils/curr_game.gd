@@ -3,7 +3,7 @@ extends Node
 var _level:int
 var _score:int
 var _high_score:int = 0
-var _score_needed:int
+var _score_needed:int = -1
 var _player_pos:Vector2
 var _boss_hp:int = 0
 
@@ -39,7 +39,7 @@ func getLevel():
 
 
 func didWin():
-	if (_score > _score_needed):
+	if (_score >= _score_needed):
 		return true
 	return false
 
