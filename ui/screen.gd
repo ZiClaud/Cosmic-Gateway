@@ -2,6 +2,10 @@ extends Control
 
 #@export var bg:Node2D
 
+const SETTINGS_SCENE = preload("res://ui/settings_page.tscn")
+const GAME_SCENE = preload("res://game/game.tscn")
+
+
 @onready var lvl2bt:Button = $Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl2Button
 @onready var lvl3bt:Button = $Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl3Button
 @onready var lvl4bt:Button = $Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl4Button
@@ -23,7 +27,7 @@ func _ready():
 
 
 func _on_settings_button_pressed():
-	get_tree().change_scene_to_file("res://ui/settings_page.tscn")
+	get_tree().change_scene_to_packed(SETTINGS_SCENE)
 
 
 func _on_quit_button_pressed():

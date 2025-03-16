@@ -1,5 +1,8 @@
 extends Node
 
+const GAME_SCENE = preload("res://game/game.tscn")
+const SCREEN_SCENE = preload("res://ui/screen.tscn")
+
 var _level:int
 var _score:int
 var _high_score:int = 0
@@ -18,7 +21,7 @@ func startLevel(lvl:int):
 		_score_needed = 500
 	elif (_level == 4):
 		_score_needed = 1000
-	get_tree().change_scene_to_file("res://game/game.tscn")
+	get_tree().change_scene_to_packed(GAME_SCENE)
 
 
 func endGame():
@@ -27,7 +30,7 @@ func endGame():
 		LevelSelection.unlockLevel(_level + 1)
 		startLevel(_level + 1)
 	else:
-		get_tree().change_scene_to_file("res://ui/screen.tscn")
+		get_tree().change_scene_to_packed(SCREEN_SCENE)
 
 
 func quitGame():
