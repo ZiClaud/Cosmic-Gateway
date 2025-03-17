@@ -3,6 +3,11 @@
 **Cosmic Gateway** is an thrilling game that takes you on an interstellar adventure! Navigate through space, overcome challenges, and unlock the secrets of the cosmos.
 
 ### 🚀 Play the Game
+
+<div align="center">
+	<img src="https://i.imgur.com/1uT08B1.png" width="600"/>	
+</div>
+
 Ready to embark on your space journey? Play **Cosmic Gateway** here:
 [**Play Now on Itch.io**](https://ziclaud.itch.io/cosmic-gateway)
 
