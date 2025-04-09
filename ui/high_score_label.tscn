@@ -5,6 +5,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_fktb3"]
 font = ExtResource("1_ldo33")
+font_size = 24
 
 [node name="HighScoreLabel" type="Label"]
 offset_left = -56.0

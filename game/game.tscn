@@ -12,11 +12,10 @@
 
 [node name="GameUI" parent="Node" instance=ExtResource("1_nctk4")]
 
-[node name="EnemySpawner" parent="." instance=ExtResource("1_hbq5f")]
-
 [node name="Background" parent="." instance=ExtResource("2_odnxg")]
-position = Vector2(35, 72)
 metadata/_edit_lock_ = true
+
+[node name="EnemySpawner" parent="." instance=ExtResource("1_hbq5f")]
 
 [node name="Player" parent="." instance=ExtResource("3_441n5")]
 position = Vector2(580, 325)

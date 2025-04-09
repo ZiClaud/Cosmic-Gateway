@@ -1,10 +1,10 @@
 extends Node2D
 
 func _ready():
-	var bg1:Node2D = $ParallaxBackground/BG1ParallaxLayer
-	var bg2:Node2D = $ParallaxBackground/BG2ParallaxLayer
-	var bg3:Node2D = $ParallaxBackground/BG3ParallaxLayer
-	var bg4:Node2D = $ParallaxBackground/BG4ParallaxLayer
+	var bg1:Node2D = $BG1TileMap
+	var bg2:Node2D = $BG2TileMap
+	var bg3:Node2D = $BG3TileMap
+	var bg4:Node2D = $BG4TileMap
 	
 	if CurrGame.getLevel() == 1:
 		bg1.visible = true

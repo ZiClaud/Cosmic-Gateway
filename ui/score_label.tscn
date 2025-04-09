@@ -5,6 +5,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_fktb3"]
 font = ExtResource("1_o6nml")
+font_size = 24
 
 [node name="ScoreLabel" type="Label"]
 offset_left = 16.0
@@ -14,3 +15,4 @@ offset_bottom = 39.0
 text = "Score: 0/500"
 label_settings = SubResource("LabelSettings_fktb3")
 script = ExtResource("2_b40ne")
+metadata/_edit_horizontal_guides_ = [-63.0]

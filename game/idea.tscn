@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://nds3dn7fygjc"]
 
 [ext_resource type="FontFile" uid="uid://cj2bfbenla0y0" path="res://assets/Bonus/kenvector_future.ttf" id="1_81ci3"]
-[ext_resource type="Texture2D" uid="uid://sacdca68rcvi" path="res://assets/Backgrounds/black.png" id="1_507ia"]
+[ext_resource type="Texture2D" uid="uid://sacdca68rcvi" path="res://assets/Backgrounds/lvl1.png" id="1_507ia"]
 [ext_resource type="Texture2D" uid="uid://un0m0tpc1dbm" path="res://assets/PNG/Meteors/meteorBrown_big4.png" id="2_fbcp2"]
 [ext_resource type="Texture2D" uid="uid://bvsclnqdfbsxk" path="res://assets/PNG/Meteors/meteorBrown_tiny1.png" id="3_3orja"]
 [ext_resource type="Texture2D" uid="uid://q10fcop3ya5s" path="res://assets/PNG/Meteors/meteorBrown_small1.png" id="4_wlnfv"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://vry7xx3qher4" path="res://assets/PNG/Power-ups/bolt_gold.png" id="7_e724x"]
 [ext_resource type="Texture2D" uid="uid://c2ult01rjhvo8" path="res://assets/PNG/ufoGreen.png" id="8_ry0s5"]
 [ext_resource type="Texture2D" uid="uid://b0l0hgt7u2pb7" path="res://assets/PNG/Lasers/laserGreen15.png" id="9_oir1j"]
-[ext_resource type="Texture2D" uid="uid://bxphmp5f0p8ry" path="res://assets/Backgrounds/blue.png" id="10_sfqhp"]
+[ext_resource type="Texture2D" uid="uid://bxphmp5f0p8ry" path="res://assets/Backgrounds/lvl2.png" id="10_sfqhp"]
 [ext_resource type="Texture2D" uid="uid://jrm3u7kycsp2" path="res://assets/PNG/ufoRed.png" id="11_u1q2y"]
 [ext_resource type="Texture2D" uid="uid://cc3tg0fwadw7i" path="res://assets/PNG/Enemies/enemyBlack1.png" id="12_ysu03"]
 [ext_resource type="Texture2D" uid="uid://dl4hketg8doyi" path="res://assets/PNG/Enemies/enemyBlack5.png" id="13_5ox2g"]

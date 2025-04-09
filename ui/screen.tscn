@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://ui/screen.gd" id="1_ww8q6"]
 [ext_resource type="FontFile" uid="uid://cj2bfbenla0y0" path="res://assets/Bonus/kenvector_future.ttf" id="1_xooj5"]
-[ext_resource type="Texture2D" uid="uid://bxphmp5f0p8ry" path="res://assets/Backgrounds/blue.png" id="2_2tjgk"]
+[ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://game/background.tscn" id="2_n3p66"]
 [ext_resource type="PackedScene" uid="uid://n6qs4nhl40wl" path="res://ui/high_score_label.tscn" id="8_s5pgo"]
 [ext_resource type="PackedScene" uid="uid://cf8nekl1scbjc" path="res://ui/credits.tscn" id="10_8gjp6"]
 
@@ -19,14 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ww8q6")
 
-[node name="ColorRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_2tjgk")
+[node name="Background" parent="." instance=ExtResource("2_n3p66")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
