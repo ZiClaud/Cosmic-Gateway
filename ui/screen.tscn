@@ -65,6 +65,14 @@ layout_mode = 2
 theme_override_constants/separation = 60
 alignment = 1
 
+[node name="C1Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_xooj5")
+theme_override_font_sizes/font_size = 32
+text = "C1"
+icon_alignment = 1
+
 [node name="Lvl1Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(150, 75)
 layout_mode = 2
@@ -82,7 +90,21 @@ disabled = true
 text = "2"
 icon_alignment = 1
 
-[node name="Lvl3Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="C2Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_xooj5")
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "C2"
+icon_alignment = 1
+
+[node name="Lvl3Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(150, 75)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_xooj5")
@@ -91,7 +113,7 @@ disabled = true
 text = "3"
 icon_alignment = 1
 
-[node name="Lvl4Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Lvl4Button" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(150, 75)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_xooj5")
@@ -100,12 +122,12 @@ disabled = true
 text = "4"
 icon_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 60
 alignment = 1
 
-[node name="SettingsButton" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="SettingsButton" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer3"]
 custom_minimum_size = Vector2(150, 75)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -113,7 +135,7 @@ theme_override_fonts/font = ExtResource("1_xooj5")
 text = "Settings"
 icon_alignment = 1
 
-[node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer/HBoxContainer3"]
 custom_minimum_size = Vector2(150, 75)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -134,9 +156,11 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/C1Button" to="." method="_on_c_1_button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl1Button" to="." method="_on_lvl_1_button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl2Button" to="." method="_on_lvl_2_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl3Button" to="." method="_on_lvl_3_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer/Lvl4Button" to="." method="_on_lvl_4_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer2/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer2/C2Button" to="." method="_on_c_2_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer2/Lvl3Button" to="." method="_on_lvl_3_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer2/Lvl4Button" to="." method="_on_lvl_4_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer3/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/HBoxContainer3/QuitButton" to="." method="_on_quit_button_pressed"]

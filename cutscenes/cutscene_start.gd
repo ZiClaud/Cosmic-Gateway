@@ -1,5 +1,7 @@
 extends Node2D
 
+const SCREEN:PackedScene = preload("res://ui/screen.tscn")
+
 var seconds_passed:int = 0
 var npcs = []
 
@@ -13,8 +15,7 @@ func _process(delta):
 
 func _on_timer_timeout():
 	if (seconds_passed >= 11):
-		self.queue_free()
-		pass # TODO: go to first level
+		get_tree().change_scene_to_packed(SCREEN)
 	
 	seconds_passed += 1
 
