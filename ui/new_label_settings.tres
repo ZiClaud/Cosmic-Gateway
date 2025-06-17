@@ -5,3 +5,5 @@
 [resource]
 font = ExtResource("1_r1ohr")
 font_size = 24
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)

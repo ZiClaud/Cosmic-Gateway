@@ -8,17 +8,23 @@ offset_left = -48.0
 offset_top = -32.0
 offset_right = 48.0
 offset_bottom = 32.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-color = Color(0.552941, 0.886275, 0.980392, 1)
+color = Color(0.552941, 0.886275, 0.980392, 0)
 script = ExtResource("1_uco8q")
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 88.0
-offset_bottom = 56.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 16.0
+offset_right = 16.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.164706, 0.164706, 0.164706, 0.901961)
 
 [node name="BubbleDialogLabel" parent="." instance=ExtResource("1_7s5oj")]

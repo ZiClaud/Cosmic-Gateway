@@ -12,55 +12,117 @@
 [node name="Background" parent="." instance=ExtResource("1_t0dcj")]
 
 [node name="NPC" parent="." instance=ExtResource("2_yom41")]
-position = Vector2(560, 320)
+position = Vector2(496, 264)
+skin_changer = true
+
+[node name="NPC3" parent="." instance=ExtResource("2_yom41")]
+position = Vector2(480, 376)
 skin_changer = true
 
 [node name="NPC2" parent="." instance=ExtResource("2_yom41")]
 position = Vector2(536, 440)
 skin_changer = true
 
-[node name="NPC3" parent="." instance=ExtResource("2_yom41")]
-position = Vector2(496, 536)
-skin_changer = true
+[node name="BubbleDialog" parent="NPC2" instance=ExtResource("4_wic80")]
+offset_left = -80.0
+offset_top = -64.0
+offset_right = 16.0
+offset_bottom = 0.0
+appear_time_sec = 4
+bubble_text = "Together we are strong!"
+bubble_width = 0.5
+IS_BLUE = true
 
 [node name="NPC4" parent="." instance=ExtResource("2_yom41")]
 position = Vector2(568, 80)
 skin_changer = true
 
+[node name="BubbleDialog" parent="NPC4" instance=ExtResource("4_wic80")]
+offset_left = -72.0
+offset_top = -72.0
+offset_right = 24.0
+offset_bottom = -8.0
+appear_time_sec = 6
+bubble_text = "Together we are strong!"
+bubble_width = 0.5
+IS_BLUE = true
+
 [node name="NPC5" parent="." instance=ExtResource("2_yom41")]
-position = Vector2(496, 264)
+position = Vector2(560, 320)
 skin_changer = true
+
+[node name="BubbleDialog" parent="NPC5" instance=ExtResource("4_wic80")]
+offset_left = -8.0
+offset_top = -64.0
+offset_right = 88.0
+offset_bottom = 0.0
+appear_time_sec = 8
+bubble_text = "Together we are strong!"
+bubble_width = 0.5
+IS_BLUE = true
 
 [node name="NPC6" parent="." instance=ExtResource("2_yom41")]
 position = Vector2(584, 504)
 skin_changer = true
 
+[node name="BubbleDialog2" parent="NPC6" instance=ExtResource("4_wic80")]
+offset_left = -16.0
+offset_top = -72.0
+offset_right = 80.0
+offset_bottom = -8.0
+appear_time_sec = 3
+bubble_text = "They don't want us here"
+bubble_width = 0.5
+IS_BLUE = true
+
 [node name="NPC7" parent="." instance=ExtResource("2_yom41")]
-position = Vector2(480, 376)
+position = Vector2(496, 536)
 skin_changer = true
+
+[node name="BubbleDialog" parent="NPC7" instance=ExtResource("4_wic80")]
+offset_left = -80.0
+offset_top = -72.0
+offset_right = 16.0
+offset_bottom = -8.0
+appear_time_sec = 1
+bubble_text = "We need to leave"
+bubble_width = 0.5
+IS_BLUE = true
+
+[node name="BubbleDialog2" parent="NPC7" instance=ExtResource("4_wic80")]
+offset_left = -80.0
+offset_top = -72.0
+offset_right = 16.0
+offset_bottom = -8.0
+appear_time_sec = 5
+bubble_text = "Together we are strong!"
+bubble_width = 0.5
+IS_BLUE = true
 
 [node name="Pink" parent="." instance=ExtResource("3_oprr6")]
 position = Vector2(496, 184)
 
 [node name="BubbleDialog" parent="Pink" instance=ExtResource("4_wic80")]
-offset_left = -96.0
-offset_top = -80.0
-offset_right = 0.0
-offset_bottom = -16.0
-appear_time_sec = 5
+offset_left = -80.0
+offset_top = -72.0
+offset_right = 16.0
+offset_bottom = -8.0
+appear_time_sec = 7
 bubble_text = "<3"
+bubble_width = 0.5
 IS_PINK = true
 
 [node name="Yellow" parent="." instance=ExtResource("5_0ttx1")]
 position = Vector2(576, 192)
 
 [node name="BubbleDialog2" parent="Yellow" instance=ExtResource("4_wic80")]
-offset_left = 16.0
+offset_left = -8.0
 offset_top = -64.0
-offset_right = 112.0
+offset_right = 88.0
 offset_bottom = 0.0
-appear_time_sec = 6
+appear_time_sec = 7
 bubble_text = "<3"
+bubble_width = 0.5
 IS_YELLOW = true
 
 [node name="Portal" parent="." instance=ExtResource("6_jkwe2")]

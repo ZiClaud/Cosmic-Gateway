@@ -11,7 +11,7 @@
 [node name="Background" parent="." instance=ExtResource("1_c88t8")]
 
 [node name="NPC" parent="." instance=ExtResource("2_drxby")]
-position = Vector2(576, 336)
+position = Vector2(1048, 144)
 
 [node name="Pink" parent="." instance=ExtResource("3_4un0w")]
 position = Vector2(160, 264)
@@ -22,7 +22,8 @@ offset_top = -88.0
 offset_right = 120.0
 offset_bottom = -24.0
 appear_time_sec = 2
-bubble_text = "?"
+bubble_text = "Yellow?"
+bubble_width = 1.75
 IS_PINK = true
 
 [node name="Portal" parent="." instance=ExtResource("5_qwna3")]
