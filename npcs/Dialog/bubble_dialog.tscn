@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://3nuxonsh6gex"]
+
+[ext_resource type="PackedScene" uid="uid://jkleou0obmci" path="res://npcs/Dialog/bubble_dialog_label.tscn" id="1_7s5oj"]
+[ext_resource type="Script" path="res://npcs/Dialog/bubble_dialog.gd" id="1_uco8q"]
+
+[node name="BubbleDialog" type="ColorRect"]
+offset_left = -48.0
+offset_top = -32.0
+offset_right = 48.0
+offset_bottom = 32.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.552941, 0.886275, 0.980392, 1)
+script = ExtResource("1_uco8q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 56.0
+color = Color(0.164706, 0.164706, 0.164706, 0.901961)
+
+[node name="BubbleDialogLabel" parent="." instance=ExtResource("1_7s5oj")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "<3"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

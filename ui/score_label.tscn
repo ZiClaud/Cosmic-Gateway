@@ -1,11 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cad6u7v75t4rm"]
+[gd_scene load_steps=3 format=3 uid="uid://cad6u7v75t4rm"]
 
-[ext_resource type="FontFile" uid="uid://hywqxf05cit3" path="res://assets/Bonus/kenvector_future_thin.ttf" id="1_o6nml"]
+[ext_resource type="LabelSettings" uid="uid://dsxvxncqdq7h0" path="res://ui/new_label_settings.tres" id="1_hrf50"]
 [ext_resource type="Script" path="res://ui/score_label.gd" id="2_b40ne"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_fktb3"]
-font = ExtResource("1_o6nml")
-font_size = 24
 
 [node name="ScoreLabel" type="Label"]
 offset_left = 16.0
@@ -13,6 +9,6 @@ offset_top = 16.0
 offset_right = 110.0
 offset_bottom = 39.0
 text = "Score: 0/500"
-label_settings = SubResource("LabelSettings_fktb3")
+label_settings = ExtResource("1_hrf50")
 script = ExtResource("2_b40ne")
 metadata/_edit_horizontal_guides_ = [-63.0]

@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://80drdcn60yx1"]
+
+[ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://game/background.tscn" id="1_t0dcj"]
+[ext_resource type="PackedScene" uid="uid://b2lul11ul6vst" path="res://npcs/npc.tscn" id="2_yom41"]
+[ext_resource type="PackedScene" uid="uid://g1d6dlcqwhtx" path="res://npcs/pink.tscn" id="3_oprr6"]
+[ext_resource type="PackedScene" uid="uid://3nuxonsh6gex" path="res://npcs/Dialog/bubble_dialog.tscn" id="4_wic80"]
+[ext_resource type="PackedScene" uid="uid://c1u0x80cvaqkb" path="res://npcs/yellow.tscn" id="5_0ttx1"]
+[ext_resource type="PackedScene" uid="uid://bi2hq6wllo2u6" path="res://game/portal.tscn" id="6_jkwe2"]
+
+[node name="Cutscene" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_t0dcj")]
+
+[node name="NPC" parent="." instance=ExtResource("2_yom41")]
+position = Vector2(560, 320)
+skin_changer = true
+
+[node name="NPC2" parent="." instance=ExtResource("2_yom41")]
+position = Vector2(536, 440)
+skin_changer = true
+
+[node name="NPC3" parent="." instance=ExtResource("2_yom41")]
+position = Vector2(496, 536)
+skin_changer = true
+
+[node name="NPC4" parent="." instance=ExtResource("2_yom41")]
+position = Vector2(568, 80)
+skin_changer = true
+
+[node name="NPC5" parent="." instance=ExtResource("2_yom41")]
+position = Vector2(496, 264)
+skin_changer = true
+
+[node name="NPC6" parent="." instance=ExtResource("2_yom41")]
+position = Vector2(584, 504)
+skin_changer = true
+
+[node name="NPC7" parent="." instance=ExtResource("2_yom41")]
+position = Vector2(480, 376)
+skin_changer = true
+
+[node name="Pink" parent="." instance=ExtResource("3_oprr6")]
+position = Vector2(496, 184)
+
+[node name="BubbleDialog" parent="Pink" instance=ExtResource("4_wic80")]
+offset_left = -96.0
+offset_top = -80.0
+offset_right = 0.0
+offset_bottom = -16.0
+appear_time_sec = 5
+bubble_text = "<3"
+IS_PINK = true
+
+[node name="Yellow" parent="." instance=ExtResource("5_0ttx1")]
+position = Vector2(576, 192)
+
+[node name="BubbleDialog2" parent="Yellow" instance=ExtResource("4_wic80")]
+offset_left = 16.0
+offset_top = -64.0
+offset_right = 112.0
+offset_bottom = 0.0
+appear_time_sec = 6
+bubble_text = "<3"
+IS_YELLOW = true
+
+[node name="Portal" parent="." instance=ExtResource("6_jkwe2")]
+position = Vector2(544, 616)
+script = null

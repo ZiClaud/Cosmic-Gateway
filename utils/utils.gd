@@ -1,6 +1,6 @@
 extends Node2D
 
-var _movement_default: bool = true
+var _movement_default: bool = false
 
 
 func is_movement_default() -> bool:

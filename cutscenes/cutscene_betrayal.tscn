@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bshpkex48poqi"]
+
+[ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://game/background.tscn" id="1_c88t8"]
+[ext_resource type="PackedScene" uid="uid://b2lul11ul6vst" path="res://npcs/npc.tscn" id="2_drxby"]
+[ext_resource type="PackedScene" uid="uid://g1d6dlcqwhtx" path="res://npcs/pink.tscn" id="3_4un0w"]
+[ext_resource type="PackedScene" uid="uid://3nuxonsh6gex" path="res://npcs/Dialog/bubble_dialog.tscn" id="4_p63v6"]
+[ext_resource type="PackedScene" uid="uid://bi2hq6wllo2u6" path="res://game/portal.tscn" id="5_qwna3"]
+
+[node name="Cutscene" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_c88t8")]
+
+[node name="NPC" parent="." instance=ExtResource("2_drxby")]
+position = Vector2(576, 336)
+
+[node name="Pink" parent="." instance=ExtResource("3_4un0w")]
+position = Vector2(160, 264)
+
+[node name="BubbleDialog" parent="Pink" instance=ExtResource("4_p63v6")]
+offset_left = 24.0
+offset_top = -88.0
+offset_right = 120.0
+offset_bottom = -24.0
+appear_time_sec = 2
+bubble_text = "?"
+IS_PINK = true
+
+[node name="Portal" parent="." instance=ExtResource("5_qwna3")]
+position = Vector2(544, 616)
+script = null

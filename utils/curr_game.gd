@@ -33,54 +33,54 @@ func endGame():
 		get_tree().change_scene_to_packed(SCREEN_SCENE)
 
 
-func quitGame():
+func quitGame() -> void:
 	get_tree().quit()
 
 
-func getLevel():
+func getLevel() -> int:
 	return _level
 
 
-func didWin():
+func didWin() -> bool:
 	if (_score >= _score_needed):
 		return true
 	return false
 
 
-func increaseScore(score:int):
+func increaseScore(score:int) ->  void:
 	_score += score
 	_setHighScore()
 
 
-func getScore():
+func getScore() -> int:
 	return _score
 
 
-func getHighScore():
+func getHighScore() -> int:
 	return _high_score
 
 
-func _setHighScore():
+func _setHighScore() -> void:
 	if (_score > _high_score):
 		_high_score = _score
 
 
-func getScoreNeeded():
+func getScoreNeeded() -> int:
 	return _score_needed
 
 
-func setPlayerPos(position:Vector2):
+func setPlayerPos(position:Vector2) -> void:
 	_player_pos = position
 
 
-func getPlayerPos():
+func getPlayerPos() -> Vector2:
 	return _player_pos
 
 
-func setBossHp(hp:int):
+func setBossHp(hp:int) -> void:
 	_boss_hp = hp
 
 
-func getBossHp():
+func getBossHp() -> int:
 	return _boss_hp
 

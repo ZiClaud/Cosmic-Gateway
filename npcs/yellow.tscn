@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1u0x80cvaqkb"]
+
+[ext_resource type="Script" path="res://npcs/npc.gd" id="1_bcxvs"]
+[ext_resource type="Texture2D" uid="uid://f1dffolqi0ch" path="res://assets/PNG/ufoYellow.png" id="5_qk4uh"]
+
+[node name="NPC" type="Node2D"]
+script = ExtResource("1_bcxvs")
+
+[node name="SkinSprite4" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_qk4uh")

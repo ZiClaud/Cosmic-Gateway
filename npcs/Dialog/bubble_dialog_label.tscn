@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://jkleou0obmci"]
+
+[ext_resource type="LabelSettings" uid="uid://dsxvxncqdq7h0" path="res://ui/new_label_settings.tres" id="1_38ws4"]
+
+[node name="BubbleDialogLabel" type="Label"]
+offset_left = -56.0
+offset_top = -8.0
+offset_right = 65.0
+offset_bottom = 10.0
+text = "Text"
+label_settings = ExtResource("1_38ws4")
+horizontal_alignment = 1
+vertical_alignment = 1
