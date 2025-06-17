@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2lul11ul6vst"]
+[gd_scene load_steps=7 format=3 uid="uid://b2lul11ul6vst"]
 
 [ext_resource type="Script" path="res://npcs/npc.gd" id="1_2rc03"]
 [ext_resource type="Texture2D" uid="uid://bpx20526kqc1n" path="res://assets/PNG/ufoBlue.png" id="2_mfoyh"]
 [ext_resource type="Texture2D" uid="uid://c2ult01rjhvo8" path="res://assets/PNG/ufoGreen.png" id="3_trasp"]
 [ext_resource type="Texture2D" uid="uid://jrm3u7kycsp2" path="res://assets/PNG/ufoRed.png" id="4_r2km8"]
 [ext_resource type="Texture2D" uid="uid://f1dffolqi0ch" path="res://assets/PNG/ufoYellow.png" id="5_xf0ug"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7r7f"]
 
 [node name="NPC" type="Node2D"]
 script = ExtResource("1_2rc03")
@@ -27,3 +29,10 @@ texture = ExtResource("4_r2km8")
 visible = false
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_xf0ug")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_h7r7f")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
