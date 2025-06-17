@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://c2ult01rjhvo8" path="res://assets/PNG/ufoGreen.png" id="4_6j24e"]
 [ext_resource type="Texture2D" uid="uid://cinf2p4egu433" path="res://assets/PNG/Parts/beam0.png" id="4_o1s6p"]
 [ext_resource type="Script" path="res://player/beam_right.gd" id="5_xwn2d"]
-[ext_resource type="Script" path="res://player/BeamLeft.gd" id="6_34urt"]
+[ext_resource type="Script" path="res://player/beam_left.gd" id="6_34urt"]
 [ext_resource type="Texture2D" uid="uid://f1dffolqi0ch" path="res://assets/PNG/ufoYellow.png" id="6_ahsus"]
 [ext_resource type="Script" path="res://player/beam_up.gd" id="7_8x128"]
-[ext_resource type="Script" path="res://player/BeamDown.gd" id="8_mjhkb"]
+[ext_resource type="Script" path="res://player/beam_down.gd" id="8_mjhkb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hxcxu"]
 radius = 29.2746
