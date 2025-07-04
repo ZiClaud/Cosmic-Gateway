@@ -1,35 +1,54 @@
-[gd_scene load_steps=7 format=3 uid="uid://bshpkex48poqi"]
+[gd_scene load_steps=9 format=3 uid="uid://bshpkex48poqi"]
 
+[ext_resource type="Script" path="res://cutscenes/cutscene_betrayal.gd" id="1_aio1w"]
 [ext_resource type="PackedScene" uid="uid://btnf3bbaaowe6" path="res://game/background.tscn" id="1_c88t8"]
 [ext_resource type="PackedScene" uid="uid://b2lul11ul6vst" path="res://npcs/npc.tscn" id="2_drxby"]
 [ext_resource type="PackedScene" uid="uid://g1d6dlcqwhtx" path="res://npcs/pink.tscn" id="3_4un0w"]
 [ext_resource type="PackedScene" uid="uid://3nuxonsh6gex" path="res://npcs/Dialog/bubble_dialog.tscn" id="4_p63v6"]
 [ext_resource type="PackedScene" uid="uid://bi2hq6wllo2u6" path="res://game/portal.tscn" id="5_qwna3"]
 [ext_resource type="PackedScene" uid="uid://c4y3te6sbo205" path="res://npcs/boss_npc.tscn" id="6_7hv8b"]
+[ext_resource type="PackedScene" uid="uid://cwo4iowvu03xd" path="res://npcs/boss_laser_npc.tscn" id="7_ti7qd"]
 
 [node name="Cutscene" type="Node2D"]
+script = ExtResource("1_aio1w")
 
 [node name="Background" parent="." instance=ExtResource("1_c88t8")]
 
 [node name="NPC" parent="." instance=ExtResource("2_drxby")]
-position = Vector2(1048, 144)
+position = Vector2(568, 104)
+
+[node name="BubbleDialog" parent="NPC" instance=ExtResource("4_p63v6")]
+offset_left = -24.0
+offset_top = -80.0
+offset_right = 72.0
+offset_bottom = -16.0
+bubble_text = "D:"
+bubble_width = 1.75
+IS_BLUE = true
 
 [node name="Pink" parent="." instance=ExtResource("3_4un0w")]
-position = Vector2(160, 264)
+position = Vector2(1024, 344)
 
 [node name="BubbleDialog" parent="Pink" instance=ExtResource("4_p63v6")]
 offset_left = -24.0
 offset_top = -80.0
 offset_right = 72.0
 offset_bottom = -16.0
-appear_time_sec = 2
 bubble_text = "Yellow?"
 bubble_width = 1.75
 IS_PINK = true
 
 [node name="Portal" parent="." instance=ExtResource("5_qwna3")]
-position = Vector2(544, 616)
+position = Vector2(568, -280)
 script = null
 
+[node name="BossLaserNPC" parent="." instance=ExtResource("7_ti7qd")]
+position = Vector2(128, 512)
+
 [node name="Boss" parent="." instance=ExtResource("6_7hv8b")]
-position = Vector2(168, 392)
+position = Vector2(128, 512)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

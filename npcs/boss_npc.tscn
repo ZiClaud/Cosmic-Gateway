@@ -9,7 +9,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_yxs8o"]
 radius = 44.0454
 
-[node name="Boss" type="Area2D" groups=["enemy", "enemy_ship"]]
+[node name="BossNPC" type="Area2D" groups=["enemy", "enemy_ship"]]
 script = ExtResource("1_4fpx6")
 
 [node name="SkinSprite1" type="Sprite2D" parent="."]

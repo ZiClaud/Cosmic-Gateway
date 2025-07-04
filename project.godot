@@ -20,6 +20,7 @@ config/icon="res://assets/PNG/ufoBlue.png"
 LevelSelection="*res://game/level_selection.gd"
 CurrGame="*res://utils/curr_game.gd"
 Utils="*res://utils/utils.gd"
+CurrCutscene="*res://utils/curr_cutscene.gd"
 
 [display]
 
